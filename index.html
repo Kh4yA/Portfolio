@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="mini-reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <header class="header flex item-center space-between">
+      <div class="logo"><h2>MD</h2></div>
+      <nav class="navbar">
+        <ul class="flex space-between gap-30">
+          <li><a href="#">Compétences</a></li>
+          <li><a href="#">A propos</a></li>
+        </ul>
+      </nav>
+      <div class="btn-neon" id="btn-contact"><a href="#"></a>Me contacter</div>
+    </header>
+    <div class="dev"><h1>DEV</h1></div>
+    <div class="legend">
+      <div class="sommary">
+        <ul>
+          <li class="project-item"><a href="#" id="acceuil">1</a></li>
+          <li class="project-item"><a href="#" id="Competences">2</a></li>
+          <li class="project-item"><a href="#" id="project">3</a></li>
+          <li class="project-item"><a href="#" id="aPropos">4</a></li>
+        </ul>
+      </div>
+      <div class="scroll">
+        <a href="#" class="scroll-down">scroll down <span> &#10230;</span></a>
+      </div>
+    </div>
+    <div class="modal flex item-center" id="modal">
+      <div class="formulaire flex item-center">
+        <form action="" method="post">
+          <div class="entree-nom flex">
+            <label for="nom">Votre nom : </label>
+            <input type="text" name="nom" id="nom" />
+          </div>
+          <div class="societe flex">
+            <label for="societe">Votre société : </label>
+            <input type="text" name="societe" id="societe" />
+          </div>
+          <textarea
+            name=""
+            id=""
+            cols="300"
+            rows="50"
+            placeholder="votre messsage"
+          ></textarea>
+          <a href="#" class="btn-neon">Envoyer</a>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
