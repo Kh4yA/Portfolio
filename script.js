@@ -5,3 +5,7 @@ btnContact.addEventListener('click', (e)=>{
     modal.classList.add('active')
 })
 
+let acceuil = document.getElementById('acceuil')
+acceuil.addEventListener('mouseover', (e)=>{
+console.log(e);
+})
