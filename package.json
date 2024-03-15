@@ -1,11 +1,11 @@
 {
   "dependencies": {
-    "sass": "^1.72.0"
+    "sass": "^1.72.0",
+    "swiper": "^11.0.7"
   },
   "name": "portfolio",
   "version": "1.0.0",
   "main": "script.js",
-  "devDependencies": {},
   "scripts": {
     "sass-dev": "sass --watch assets/main.scss public/css/style.css",
     "sass-prod": "sass --style=compressed assets/main.scss public/css/style.min.css"

@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="./public/css/style.css" />
     <title>Portfolio</title>
   </head>
   <body>
+    <!-- Header -->
     <header class="header flex item-center space-between">
       <div class="logo"><h2>MD</h2></div>
       <nav class="navbar">
@@ -27,8 +29,8 @@
         </label>
         
       </div>
-
     </header>
+    <!-- Hero -->
     <section class="hero">
       <div class="dev dev-annimation neon-allume"><h1>DEV</h1></div>
       <div class="nom">
@@ -37,14 +39,15 @@
       </div>
       <div class="img-moi"><img src="./public/img/moi-transparent.png" alt=""></div>
     </section>
+    <!-- legend -->
     <div class="legend">
       <div class="sommary flex space-between">
         <div>
           <ul>
-            <li class="project-item flex item-center"><p class="item-center d-none">acceuil</p><a href="#"  id="acceuil"><span>1</span></a></li>
-            <li class="project-item flex item-center"><p class="item-center d-none">Compétences</p><a href="#" id="Competences"><span>2</span></a></li>
-            <li class="project-item flex item-center"><p class="item-center d-none">Projet</p><a href="#" id="project"><span>3</span></a></li>
-            <li class="project-item flex item-center"><p class="item-center d-none">A propos</p><a href="#" id="aPropos"><span>4</span></a></li>
+            <li class="project-item flex item-center"><a href="#" class="btn"><span id="acceuil">1</span></a></li>
+            <li class="project-item flex item-center"><a href="#" class="btn"><span id="Competences">2</span></a></li>
+            <li class="project-item flex item-center"><a href="#" class="btn"><span id="project">3</span></a></li>
+            <li class="project-item flex item-center"><a href="#" class="btn"><span id="aPropos">4</span></a></li>
           </ul>
           <div class="scroll flex">
             <a href="#" class="scroll-down">scroll down <span> &#10230;</span></a>
@@ -52,6 +55,48 @@
         </div>
       </div>
     </div>
-    <script src="./public/js/script.js" defer></script>
+    <main class="container">
+          <!-- Competence -->
+    <section class="competence margin-bottom">
+      <h2>Les technologies que j'utilise</h2>
+      <div class="flex space-between">
+        <div> <img src="./public/img/logo-HTML.png" alt="logo html"></div>
+        <div> <img src="./public/img/logo-css.png" alt="logo css"></div>
+        <div> <img src="./public/img/logo-sass.png" alt=" logo sass"></div>
+        <div> <img src="./public/img/javascript-simple.png" alt="logo javascript"></div>
+      </div>
+    </section>
+    <!-- Mes projet app-meteo-->
+    <section class="projet flex space-between app-meteo">
+        <div class="">
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><img src="https://picsum.photos/id/237/400/600" alt=""></div>
+              <div class="swiper-slide"><img src="https://picsum.photos/id/242/400/600" alt=""></div>
+              <div class="swiper-slide"><img src="https://picsum.photos/id/278/400/600" alt=""></div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <div class="content-card ">
+          <h3 class="padding-bottom">App meteo</h3>
+          <div class="padding-bottom">
+            <P class="bold padding-bottom">Les technos utilisées</P>
+            <img src="./public/img/logo-HTML.png" alt="">
+            <img src="./public/img/logo-css.png" alt="">
+            <img src="./public/img/logo-sass.png" alt="">
+            <img src="./public/img/logo-javascript.png" alt="">
+          </div>
+          <p>Lors de mon apprentissage j'ai mis au point une application météo avec geolocalisation. <br>
+            Elle possède un fond d'ecran dynamique qui reagi en fonction de la météo actuelle. <br>
+            Elle possède également la prediction sur 7 jour ainsi que la prévision heure par heure.
+
+          </p>
+        </div>
+    </section>
+    </main>
+    <script type="module" src="./public/js/script.js" defer></script>
   </body>
 </html>

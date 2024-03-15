@@ -1,5 +1,6 @@
 /*Nav lateral droite*/
 .sommary {
+    justify-content: flex-end;
     position: relative;
     width: 100vw;
     top: 50%;
@@ -8,7 +9,6 @@
   .sommary ul {
     display: flex;
     flex-direction: column;
-    align-items: center;
     list-style-type: none;
     height: 30vh;
     padding: 10px;
@@ -30,7 +30,7 @@
   .sommary ul li a {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center ;
     width: 48px;
     height: 48px;
     margin: auto;
@@ -61,4 +61,8 @@
   }
   .project-item {
     gap: 20px;
+  }
+  .bg-color{
+    background-color: var(--secondary-color);
+    transition: all .150s ease;
   }
