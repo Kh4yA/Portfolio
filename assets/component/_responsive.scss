@@ -1,0 +1,82 @@
+/* version mobile */
+@media all and (max-width: 579px) {
+    .img-moi{
+      bottom: -13vh;
+    }
+    .nom{
+      margin: 41vh 5vw 0 0;
+    }
+    .sommary {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 50vw;
+      height: 100vh;
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(19px);
+      -webkit-backdrop-filter: blur(19px);
+      border-radius: 10px 0 0 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .sommary.active{
+      display: block;
+    }
+    .scroll-down {
+      display: none;
+    }
+    .navbar {
+      display: none;
+    }
+    .sommary ul li a {
+      width: 36px;
+      height: 36px;
+      display: none;
+    }
+    .sommary ul li p{
+      width: 35vw;
+    }
+    .burger{
+      z-index: 1000;
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 5px;
+      background-color: var(--secondary-color);
+      border-radius: 5px;
+    }
+    .burger::after,
+    .burger::before{
+      content: "";
+      display: inline-block;
+      transform-origin: center;
+      position: absolute;
+      width: 40px;
+      height: 5px;
+      background-color: #fff;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+    .burger::after{
+      top: 10px;
+    }
+    .burger::before{
+      top: -10px;
+    }
+    .burger.open{
+      background-color: transparent;
+    }
+    .burger.open::after{
+      top: 0;
+      transform: rotate(45deg);
+      background-color: red;
+    }
+    .burger.open::before{
+      top: 0;
+      transform: rotate(-45deg);
+      background-color: red;
+    }
+  
+  }
+  
