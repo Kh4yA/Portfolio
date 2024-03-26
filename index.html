@@ -1,102 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.css">
-    <link rel="stylesheet" href="./public/css/style.css" />
-    <title>Portfolio</title>
-  </head>
-  <body>
-    <!-- Header -->
-    <header class="header flex item-center space-between">
-      <div class="logo"><h2>MD</h2></div>
-      <nav class="navbar">
-        <ul class="flex space-between gap-30">
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-        </ul>
-      </nav>
-      <div id="open-burger"><span class="burger"></span></div>
-      <div class="btn-neon"> 
-        <input id="checkbox" type="checkbox" />
-        <label class="switch" for="checkbox">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="slider">
-            <path
-              d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V256c0 17.7 14.3 32 32 32s32-14.3 32-32V32zM143.5 120.6c13.6-11.3 15.4-31.5 4.1-45.1s-31.5-15.4-45.1-4.1C49.7 115.4 16 181.8 16 256c0 132.5 107.5 240 240 240s240-107.5 240-240c0-74.2-33.8-140.6-86.6-184.6c-13.6-11.3-33.8-9.4-45.1 4.1s-9.4 33.8 4.1 45.1c38.9 32.3 63.5 81 63.5 135.4c0 97.2-78.8 176-176 176s-176-78.8-176-176c0-54.4 24.7-103.1 63.5-135.4z"
-            ></path>
-          </svg>
-        </label>
-        
-      </div>
-    </header>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="dev dev-annimation neon-allume"><h1>DEV</h1></div>
-      <div class="nom">
-        <h3 class="titre-nom slide-in-elliptic-bottom-bck">Mathieu <br>  Daszczynski</h3>
-        <p class="developpeur slide-in-elliptic-bottom-bck">Développeur Full Stack</p>
-      </div>
-      <div class="img-moi"><img src="./public/img/moi-transparent.png" alt=""></div>
-    </section>
-    <!-- legend -->
-    <div class="legend">
-      <div class="sommary flex space-between">
-        <div>
-          <ul>
-            <li class="project-item flex item-center"><a href="#" class="btn"><span id="acceuil">1</span></a></li>
-            <li class="project-item flex item-center"><a href="#" class="btn"><span id="Competences">2</span></a></li>
-            <li class="project-item flex item-center"><a href="#" class="btn"><span id="project">3</span></a></li>
-            <li class="project-item flex item-center"><a href="#" class="btn"><span id="aPropos">4</span></a></li>
-          </ul>
-          <div class="scroll flex">
-            <a href="#" class="scroll-down">scroll down <span> &#10230;</span></a>
-          </div>
-        </div>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.css">
+  <link rel="stylesheet" href="./public/css/style.css" />
+  <title>Portfolio</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header flex item-center space-between">
+    <div class="logo">
+      <h2>MD</h2>
+    </div>
+    <nav class="navbar">
+      <ul class="flex space-between gap-30">
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+      </ul>
+    </nav>
+    <div id="open-burger"><span class="burger"></span></div>
+  </header>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="nom">
+      <h2>WELCOME.</h2>
+      <p>Je suis DASZCZYNSKI Mathieu, développeur fullStack. J'ai également des Competences en UI / UX</p>
+    </div>
+    <div class="img-moi"><img src="./public/img/moi-transparent.png" alt=""></div>
+  </section>
+  <!-- legend -->
+  <div class="legend flex space-between">
+    <div class="contact flex direction-column">
+      <a href="mailto:mathieu.daszczynski@yahoo.com"><img src="./public/img/mail-white.png" alt="logo mail"></a>
+      <a href="tel:+330640493022"><img src="./public/img/tel-white.png" alt="logo tel"></a>
+      <a href="https://github.com"><img src="./public/img/github-white.png" alt="logo git" target="_blank"></a>
+    </div>
+    <div class="sommary">
+      <ul>
+        <li class="btn flex item-center justify-center"><a href="#" class=""><span id="acceuil">1</span></a></li>
+        <li class="btn flex item-center justify-center"><a href="#" class=""><span id="Competences">2</span></a></li>
+        <li class="btn flex item-center justify-center"><a href="#" class=""><span id="project">3</span></a></li>
+        <li class="btn flex item-center justify-center"><a href="#" class=""><span id="aPropos">4</span></a></li>
+      </ul>
+      <div class="scroll flex">
+        <a href="#" class="scroll-down">scroll down <span> &#10230;</span></a>
       </div>
     </div>
-    <main class="container">
-          <!-- Competence -->
-    <section class="competence margin-bottom">
+  </div>
+
+  <div class="card-content">
+
+  </div>
+  <main class="container">
+    <section class="competence flex item-center justify-center card-style">
       <h2>Les technologies que j'utilise</h2>
-      <div class="flex space-between">
+      <div class="flex space-between item-center">
         <div> <img src="./public/img/logo-HTML.png" alt="logo html"></div>
         <div> <img src="./public/img/logo-css.png" alt="logo css"></div>
         <div> <img src="./public/img/logo-sass.png" alt=" logo sass"></div>
         <div> <img src="./public/img/javascript-simple.png" alt="logo javascript"></div>
+        <div><img src="./public/img/php-logo.png" alt="logo php"></div>
+        <div><img src="./public/img/symfony_black_03.png" alt="logo symphony"></div>
+        <div><img src="./public/img/MySQL.png" alt="logo MySQL"></div>
+        <div><img src="./public/img/react.png" alt="logo react"></div>
       </div>
     </section>
-    <!-- Mes projet app-meteo-->
-    <section class="projet flex space-between app-meteo">
-        <div class="">
-          <div class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide"><img src="https://picsum.photos/id/237/400/600" alt=""></div>
-              <div class="swiper-slide"><img src="https://picsum.photos/id/242/400/600" alt=""></div>
-              <div class="swiper-slide"><img src="https://picsum.photos/id/278/400/600" alt=""></div>
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-        <div class="content-card ">
-          <h3 class="padding-bottom">App meteo</h3>
-          <div class="padding-bottom">
-            <P class="bold padding-bottom">Les technos utilisées</P>
-            <img src="./public/img/logo-HTML.png" alt="">
-            <img src="./public/img/logo-css.png" alt="">
-            <img src="./public/img/logo-sass.png" alt="">
-            <img src="./public/img/logo-javascript.png" alt="">
-          </div>
-          <p>Lors de mon apprentissage j'ai mis au point une application météo avec geolocalisation. <br>
-            Elle possède un fond d'ecran dynamique qui reagi en fonction de la météo actuelle. <br>
-            Elle possède également la prediction sur 7 jour ainsi que la prévision heure par heure.
 
-          </p>
+    <section class="projet flex margin-top35 space-between app-meteo card-style">
+      <div class="image-card">
+        <div class="swiper">
+
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide"><img src="https://picsum.photos/id/237/400/600" alt=""></div>
+            <div class="swiper-slide"><img src="https://picsum.photos/id/242/400/600" alt=""></div>
+            <div class="swiper-slide"><img src="https://picsum.photos/id/278/400/600" alt=""></div>
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
+      </div>
+      <div class="content-card">
+        <h3 class="padding-bottom">App meteo</h3>
+        <div class="padding-bottom">
+          <P class="bold padding-bottom">Les technos utilisées</P>
+          <img src="./public/img/logo-HTML.png" alt="">
+          <img src="./public/img/logo-css.png" alt="">
+          <img src="./public/img/logo-sass.png" alt="">
+          <img src="./public/img/logo-javascript.png" alt="">
+        </div>
+        <p>Lors de mon apprentissage j'ai mis au point une application météo avec geolocalisation. <br>
+          Elle possède un fond d'ecran dynamique qui reagi en fonction de la météo actuelle. <br>
+          Elle possède également la prediction sur 7 jour ainsi que la prévision heure par heure.
+        </p>
+      </div>
     </section>
-    </main>
-    <script type="module" src="./public/js/script.js" defer></script>
-  </body>
+  </main>
+
+  <script type="module" src="./public/js/script.js" defer></script>
+</body>
+
 </html>

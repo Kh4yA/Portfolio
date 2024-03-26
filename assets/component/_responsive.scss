@@ -1,5 +1,6 @@
 /* version mobile */
 @media all and (max-width: 579px) {
+  //hero
     .img-moi{
       bottom: -13vh;
     }
@@ -43,7 +44,7 @@
       display: inline-block;
       width: 40px;
       height: 5px;
-      background-color: var(--secondary-color);
+      background-color: $secondary-color;
       border-radius: 5px;
     }
     .burger::after,
@@ -77,6 +78,14 @@
       transform: rotate(-45deg);
       background-color: red;
     }
-  
-  }
-  
+    //card
+    .image-card{
+      width: 100%;
+    }
+    .content-card{
+      width: 100%;
+    }
+    .projet{
+      width: 80%;
+    }
+}

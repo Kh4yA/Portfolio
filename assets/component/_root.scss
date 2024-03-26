@@ -6,7 +6,8 @@
     font-style: normal;
     font-family: "Roboto", sans-serif;*/
 /* --------------------key frames DEV -------------------------*/
-:root {
-    --primary-color: #1d1d1d;
-    --secondary-color: #2272ff;
-  }
+
+    $primary-color: #1d1d1d;
+    $secondary-color: #2272ff;
+    $color-card: darken(#1d1d1d,1%)
+    

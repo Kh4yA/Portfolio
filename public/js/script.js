@@ -21,15 +21,8 @@ openBurger.addEventListener('click', ()=>{
     sommary.classList.toggle('active')
 
 })
-btnNeon.addEventListener('click',()=>{
-    dev.classList.toggle('neon-allume-text')
-    competence.classList.toggle('neon-allume-box')
-    projet.classList.toggle('neon-allume-box')
-})
-
 const swiper = new Swiper('.swiper', {
-    effect: 'cards',
-    cardsEffect: {
-      // ...
-    },
-  });
+  mousewheel: {
+    invert: true,
+  },
+});

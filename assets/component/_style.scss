@@ -1,30 +1,96 @@
-//competence
-.competence{
-    padding: 10px;
-    border-radius: 20px;
-    width: 100%;
+//nav
+.legend {
+  position: fixed;
+  width: 100vw;
+  top: 30%;
+  .contact {
+    a {
+      img {
+        margin-left: 80px;
+        width: 50px;
+      }
+    }
+  }
+  .sommary {
+    ul {
+      li {
+        margin-bottom: 20px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid white;
+      }
+    }
+    .scroll-down {
+      position: relative;
+      top: 28vh;
+      left: -20px;
+      transform: rotate(90deg);
+    }
+  }
 }
-.competence h2{
+.nom {
+  text-align: left;
+  margin-left: 45%;
+  margin-top: 15%;
+  width: 35%;
+  height: 100vh;
+  h2 {
+    font-weight: 100;
+    font-size: 7rem;
+    text-align: right;
+    letter-spacing: 5px;
+  }
+}
+.img-moi {
+  z-index: -5;
+  position: fixed;
+  bottom: -60vh;
+  left: -10%;
+  background-repeat: no-repeat;
+  width: 50vw;
+  height: auto;
+  filter: drop-shadow(1px 1px 15px #000000);
+}
+
+.bg-color {
+  background-color: $secondary-color;
+  transition: all 0.3s ease;
+}
+//competence
+.competence {
+  background-color: $color-card;
+  padding: 10px;
+  border-radius: 20px;
+  width: 90%;
+  h2 {
     text-align: center;
     margin: 10%;
-}
-.competence img{
-    width: 150px;
+  }
+  img {
+    width: 100px;
+  }
 }
 //projet
-.projet{
-    padding: 20px;
-    border-radius: 15px;
+.projet {
+  background-color: $color-card;
+  overflow: hidden;
+  padding: 20px;
+  border-radius: 15px;
+  width: 90%;
 }
-.swiper{
-    width: 400px;
-    height: 600px;
+.swiper {
+  width: 100%;
+  height: auto;
 }
 //projet app meteo
-.content-card{
-width: 50%;
-gap: 30px;
+.image-card {
+  width: 50%;
 }
-.content-card img{
+.content-card {
+  width: 50%;
+  gap: 30px;
+  img {
     width: 28px;
+  }
 }
