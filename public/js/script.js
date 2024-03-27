@@ -96,7 +96,7 @@ let animatIntersect = function (entries, observer) {
       modifBtnRemove(btnAcceuil, acceuil,"bg-color","btn-oval","1")
       modifBtnRemove(btnCompetence,competence,"bg-color","btn-oval","2")
       modifBtnRemove(btnContact,contact,"bg-color","btn-oval","4")
-      modifBtnActive(btnProjet,projet,'bg-color', 'btn-oval','Projet')
+      modifBtnActive(btnProjet,projet,'bg-color', 'btn-oval','Projets')
       scrollDown.classList.remove('d-none')
     }else if (entry.target.id === 'sectionContact' && entry.isIntersecting){
       console.log(entry.target);

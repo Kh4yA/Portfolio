@@ -25,6 +25,7 @@ p {
 }
 body {
   background-image: url("../../public/img/abstract-design-background-smooth-flowing-lines.jpg");
+  background-size: 100% 100%;
 
 }
 .flex {
@@ -45,6 +46,9 @@ body {
 }
 .space-between {
   justify-content: space-between;
+}
+.space-arround{
+  justify-content: space-around;
 }
 .gap-30 {
   gap: 30px;
@@ -73,12 +77,15 @@ body {
 .padding-bottom {
   padding-bottom: 20px;
 }
+.padding20{
+  padding: 20px;
+}
 .card-style {
   border-radius: 30px;
   background-color: white;
-  background: rgba(255, 255, 255, 0.044);
+  background: rgba(255, 255, 255, 0.03);
   box-shadow: 0 8px 32px 0 rgba(34, 115, 255, 0.1);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);

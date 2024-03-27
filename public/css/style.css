@@ -120,6 +120,7 @@ p {
 
 body {
   background-image: url("../../public/img/abstract-design-background-smooth-flowing-lines.jpg");
+  background-size: 100% 100%;
 }
 
 .flex {
@@ -145,6 +146,10 @@ body {
 
 .space-between {
   justify-content: space-between;
+}
+
+.space-arround {
+  justify-content: space-around;
 }
 
 .gap-30 {
@@ -182,12 +187,16 @@ body {
   padding-bottom: 20px;
 }
 
+.padding20 {
+  padding: 20px;
+}
+
 .card-style {
   border-radius: 30px;
   background-color: white;
-  background: rgba(255, 255, 255, 0.044);
+  background: rgba(255, 255, 255, 0.03);
   box-shadow: 0 8px 32px 0 rgba(34, 115, 255, 0.1);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -248,14 +257,14 @@ header {
 
 .nom {
   text-align: left;
-  margin-left: 45%;
-  margin-top: 25%;
+  margin-left: 40%;
+  margin-top: 10%;
   width: 40%;
   height: 100vh;
 }
 .nom h2 {
   font-weight: 100;
-  font-size: 7rem;
+  font-size: 10rem;
   text-align: right;
   letter-spacing: 5px;
 }
@@ -277,13 +286,18 @@ header {
 }
 
 .competence {
-  padding: 10px;
-  border-radius: 20px;
   width: 80%;
 }
 .competence h2 {
+  width: 100%;
   text-align: center;
-  margin: 10%;
+}
+.competence .competence-grid {
+  padding-top: 50px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 100px;
 }
 .competence img {
   width: 100px;
@@ -359,6 +373,7 @@ header {
   color: #000;
   top: 50%;
   left: 10%;
+  padding-bottom: 2px;
   transform: translateY(-50%);
   color: #aaa;
   font-size: 20px;
@@ -409,23 +424,33 @@ header {
   border-color: #2272ff;
   background: rgba(0, 0, 0, 0.1254901961);
   font-size: 20px;
+  font-weight: 100;
   background-image: linear-gradient(to right, transparent 50%, white, #2272ff 50%);
   background-size: 200%;
   cursor: pointer;
   transition: all 0.5s ease;
 }
+.btn input {
+  font-weight: 100;
+}
 
 .btn:hover {
   color: white;
   background-position: 100%;
+  font-weight: 100;
 }
 
 footer {
   width: 100%;
-  height: 20vh;
+  text-align: center;
+  height: 5vh;
+  padding: 10px;
   background-color: 333;
   border-top: 1px solid #2272ff;
   color: #fff;
+}
+footer span {
+  color: #2272ff;
 }
 
 /*# sourceMappingURL=style.css.map */
