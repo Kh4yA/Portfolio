@@ -58,7 +58,10 @@ function modifBtnRemove (name1, name2,class1, class2, text) {
   name1.classList.remove(class1, class2)
   name2.innerText = text
 }
-
+openBurger.addEventListener('click',()=>{
+  burger.classList.toggle('open')
+  sommary.classList.toggle('active')
+})
 
 let swiper = new Swiper(".mySwiper", {
   pagination: {
@@ -71,7 +74,7 @@ let swiper = new Swiper(".mySwiper", {
 });
 
 //Animation
-const ratio = 0
+const ratio = .2
 let options = {
   root: null,
   rootMargin: "0px",
@@ -80,25 +83,28 @@ let options = {
 
 let animatIntersect = function (entries, observer) {
   entries.forEach((entry, pos) => {
-    console.log(entry);
-    if (entry.target.id === "sectionAccueil" && entry.isIntersecting) {
+    console.log(entry.intersectionRatio);
+    if (entry.target.id === "sectionAccueil" && entry.isIntersecting && entry.intersectionRatio) {
       modifBtnActive(btnAcceuil,acceuil,"bg-color","btn-oval","Acceuil")
       modifBtnRemove(btnCompetence,competence,"bg-color","btn-oval","2")
       modifBtnRemove(btnProjet,projet,"bg-color","btn-oval","3")
       modifBtnRemove(btnContact,contact,"bg-color","btn-oval","4")
       scrollDown.classList.remove('d-none')
+      photoMoi.classList.remove('reduit')
     } else if (entry.target.id === 'sectionCompetence' && entry.isIntersecting) {
       modifBtnRemove(btnAcceuil, acceuil,"bg-color","btn-oval","1")
       modifBtnActive(btnCompetence,competence,"bg-color","btn-oval","Technologies")
       modifBtnRemove(btnProjet,projet,"bg-color","btn-oval","3")
       modifBtnRemove(btnContact,contact,"bg-color","btn-oval","4")
       scrollDown.classList.remove('d-none')
+      photoMoi.classList.add('reduit')
     } else if (entry.target.id === 'sectionProjet' && entry.isIntersecting) {
       modifBtnRemove(btnAcceuil, acceuil,"bg-color","btn-oval","1")
       modifBtnRemove(btnCompetence,competence,"bg-color","btn-oval","2")
       modifBtnRemove(btnContact,contact,"bg-color","btn-oval","4")
       modifBtnActive(btnProjet,projet,'bg-color', 'btn-oval','Projets')
       scrollDown.classList.remove('d-none')
+      photoMoi.classList.add('reduit')
     }else if (entry.target.id === 'sectionContact' && entry.isIntersecting){
       console.log(entry.target);
       modifBtnRemove(btnAcceuil, acceuil,"bg-color","btn-oval","1")
@@ -106,6 +112,7 @@ let animatIntersect = function (entries, observer) {
       modifBtnRemove(btnProjet,projet,"bg-color","btn-oval","3")
       modifBtnActive(btnContact,contact,'bg-color', 'btn-oval','Contact')
       scrollDown.classList.remove('d-none')
+      photoMoi.classList.add('reduit')
     }else if(entry.target.id === 'sectionFooter' && entry.isIntersecting){
       scrollDown.classList.add('d-none')
     }
@@ -119,12 +126,4 @@ observer.observe(document.getElementById('sectionContact'))
 observer.observe(document.getElementById('sectionFooter'))
 
 
-window.addEventListener('scroll',(e)=>{
-  console.log(window.scrollY);
-  if(window.scrollY>500){
-    photoMoi.style.width='10vw'
-  }else{
-    photoMoi.style.width='50vw'
-  }
-})
 

@@ -1,20 +1,18 @@
 /* version mobile */
 @media all and (max-width: 579px) {
   //hero
-    .img-moi{
-      bottom: -13vh;
-    }
+  
     .nom{
       margin: 41vh 5vw 0 0;
     }
     .sommary {
       display: none;
-      position: absolute;
+      position: fixed;
       right: 0;
       top: 0;
       width: 50vw;
       height: 100vh;
-      background: rgba(255, 255, 255, 0.15);
+      background: #333;
       box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
       backdrop-filter: blur(19px);
       -webkit-backdrop-filter: blur(19px);
@@ -39,7 +37,6 @@
       width: 35vw;
     }
     .burger{
-      z-index: 1000;
       position: relative;
       display: inline-block;
       width: 40px;
