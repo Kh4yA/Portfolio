@@ -70,6 +70,10 @@
   width: 50vw;
   height: auto;
   filter: drop-shadow(1px 1px 15px #000000);
+  transition: width .3s ease;
+  img{
+    width: 100%;
+  }
 }
 
 .bg-color {
@@ -79,7 +83,7 @@
 
 //competence
 .competence {
-  width: 80%;
+  width: 85%;
   h2{
     width: 100%;
     text-align: center;
@@ -125,7 +129,7 @@
 }
 //Psection projet
 .section-projet{
-  width: 80%;
+  width: 85%;
   height: 90vh;
   margin-bottom: 30px;
   h2{
@@ -149,7 +153,7 @@
 }
 //section Contact
 .section-contact{
-  width: 80%;
+  width: 85%;
   padding: 15px;
   h2{
     text-align: center;

@@ -278,6 +278,10 @@ header {
   width: 50vw;
   height: auto;
   filter: drop-shadow(1px 1px 15px #000000);
+  transition: width 0.3s ease;
+}
+.img-moi img {
+  width: 100%;
 }
 
 .bg-color {
@@ -286,7 +290,7 @@ header {
 }
 
 .competence {
-  width: 80%;
+  width: 85%;
 }
 .competence h2 {
   width: 100%;
@@ -333,7 +337,7 @@ header {
 }
 
 .section-projet {
-  width: 80%;
+  width: 85%;
   height: 90vh;
   margin-bottom: 30px;
 }
@@ -354,7 +358,7 @@ header {
 }
 
 .section-contact {
-  width: 80%;
+  width: 85%;
   padding: 15px;
 }
 .section-contact h2 {

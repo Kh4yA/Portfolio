@@ -15,6 +15,7 @@ let btnContact = document.getElementById('btnContact')
 let scrollDown = document.querySelector('.scroll')
 let inputs = document.querySelectorAll('input')
 let textarea = document.querySelector('textarea')
+let photoMoi = document.querySelector('.img-moi')
 for (let i =0;i<inputs.length;i++){
   let input = inputs[i]
   input.addEventListener('input', (e)=>{
@@ -118,5 +119,12 @@ observer.observe(document.getElementById('sectionContact'))
 observer.observe(document.getElementById('sectionFooter'))
 
 
-
+window.addEventListener('scroll',(e)=>{
+  console.log(window.scrollY);
+  if(window.scrollY>500){
+    photoMoi.style.width='10vw'
+  }else{
+    photoMoi.style.width='50vw'
+  }
+})
 
