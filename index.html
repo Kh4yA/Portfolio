@@ -24,10 +24,10 @@
     <div id="open-burger"><span class="burger"></span></div>
   </header>
   <!-- Hero -->
-  <section class="hero">
+  <section class="hero" id="sectionAccueil">
     <div class="nom">
       <h2>WELCOME.</h2>
-      <p>Je suis DASZCZYNSKI Mathieu, développeur fullStack. J'ai également des Competences en UI / UX</p>
+      <p>Je suis DASZCZYNSKI Mathieu, développeur fullStack attaché à ce metier et surtout developpeur passionné.</p>
     </div>
     <div class="img-moi"><img src="./public/img/moi-transparent.png" alt=""></div>
   </section>
@@ -38,12 +38,16 @@
       <a href="tel:+330640493022"><img src="./public/img/tel-white.png" alt="logo tel"></a>
       <a href="https://github.com"><img src="./public/img/github-white.png" alt="logo git" target="_blank"></a>
     </div>
-    <div class="sommary">
+    <div class="sommary btn-oval">
       <ul>
-        <li class="btn flex item-center justify-center"><a href="#" class=""><span id="acceuil">1</span></a></li>
-        <li class="btn flex item-center justify-center"><a href="#" class=""><span id="Competences">2</span></a></li>
-        <li class="btn flex item-center justify-center"><a href="#" class=""><span id="project">3</span></a></li>
-        <li class="btn flex item-center justify-center"><a href="#" class=""><span id="aPropos">4</span></a></li>
+        <li class="btn flex item-center justify-center" id="btnAcceuil"><a href="#sectionAccueil"><span
+              id="acceuil">1</span></a></li>
+        <li class="btn flex item-center justify-center" id="btnCompetence"><a href="#sectionCompetence"><span
+              id="competences">2</span></a></li>
+        <li class="btn flex item-center justify-center" id="btnProject"><a href="#sectionProjet"><span
+              id="project">3</span></a></li>
+        <li class="btn flex item-center justify-center" id="btnContact"><a href="#sectionContact"><span
+              id="contact">4</span></a></li>
       </ul>
       <div class="scroll flex">
         <a href="#" class="scroll-down">scroll down <span> &#10230;</span></a>
@@ -51,11 +55,8 @@
     </div>
   </div>
 
-  <div class="card-content">
-
-  </div>
   <main class="container">
-    <section class="competence flex item-center justify-center card-style">
+    <section class="competence flex justify-center item-center card-style" id="sectionCompetence">
       <h2>Les technologies que j'utilise</h2>
       <div class="flex space-between item-center">
         <div> <img src="./public/img/logo-HTML.png" alt="logo html"></div>
@@ -66,39 +67,141 @@
         <div><img src="./public/img/symfony_black_03.png" alt="logo symphony"></div>
         <div><img src="./public/img/MySQL.png" alt="logo MySQL"></div>
         <div><img src="./public/img/react.png" alt="logo react"></div>
+        <div><img src="./public/img/icons8-mac-os-150.png" alt="logo react"></div>
       </div>
     </section>
-
-    <section class="projet flex margin-top35 space-between app-meteo card-style">
-      <div class="image-card">
-        <div class="swiper">
-
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide"><img src="https://picsum.photos/id/237/400/600" alt=""></div>
-            <div class="swiper-slide"><img src="https://picsum.photos/id/242/400/600" alt=""></div>
-            <div class="swiper-slide"><img src="https://picsum.photos/id/278/400/600" alt=""></div>
+    <!-- Projet -->
+    <section class="section-projet card-style margin-top35" id="sectionProjet">
+      <h2>Mes projets</h2>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <!-- carte projet 1-->
+            <div class="projet flex space-between">
+              <div class="image-card">
+                <div class=""><img src="public/img/MNTN.png" alt="site de mntn"></div>
+              </div>
+              <div class="content-card">
+                <h3 class="padding-bottom">Maquette MNTN</h3>
+                <p class="padding-bottom">Fevrier 2024</p>
+                <div class="padding-bottom">
+                  <P class="bold padding-bottom">Les technos utilisées</P>
+                  <img src="./public/img/logo-HTML.png" alt="">
+                  <img src="./public/img/logo-css.png" alt="">
+                  <img src="./public/img/logo-javascript.png" alt="">
+                </div>
+                <p>Lors de mon apprentissage j'ai été amener à reproduire se site selon une maquette <br>
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="swiper-pagination"></div>
+          <div class="swiper-slide">
+            <!-- carte projet 2-->
+            <div class="projet flex space-between">
+              <div class="image-card">
+                <div class=""><img src="public/img/4element.png" alt="maquette dees 4element"></div>
+              </div>
+              <div class="content-card">
+                <h3 class="padding-bottom">Maquette 4elements</h3>
+                <p class="padding-bottom">Fevrier 2024</p>
+                <div class="padding-bottom">
+                  <P class="bold padding-bottom">Les technos utilisées</P>
+                  <img src="./public/img/logo-HTML.png" alt="">
+                  <img src="./public/img/logo-css.png" alt="">
+                  <img src="./public/img/logo-sass.png" alt="">
+                  <img src="./public/img/logo-javascript.png" alt="">
+                </div>
+                <p>Pendant mon apprentissage j'ai recu comme cahier des charges le site des 4 elements.
+                  Il possède des caroussels et également une page (feu).
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <!-- carte projet 2-->
+            <div class="projet flex space-between">
+              <div class="image-card">
+                <div class=""><img src="public/img/La-ruche.png" alt="maquette de la ruche"></div>
+              </div>
+              <div class="content-card">
+                <h3 class="padding-bottom">La ruche</h3>
+                <p class="padding-bottom">Janvier 2024
+
+                </p>
+                <div class="padding-bottom">
+                  <P class="bold padding-bottom">Les technos utilisées</P>
+                  <img src="./public/img/logo-HTML.png" alt="">
+                  <img src="./public/img/logo-css.png" alt="">
+                </div>
+                <p>L'une de mes première realisation avec integration du responsive pour cette maquette
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <!-- carte projet 4-->
+            <div class="projet justify-center">
+              <div class="image-card">
+                <div class=""><img src="public/img/App-meteo.png" alt="photo de mon app meteo"></div>
+              </div>
+              <div class="content-card">
+                <h3 class="padding-bottom">App meteo</h3>
+                <p class="padding-bottom">Mars 2024</p>
+                <div class="padding-bottom">
+                  <P class="bold padding-bottom">Les technos utilisées</P>
+                  <img src="./public/img/logo-HTML.png" alt="">
+                  <img src="./public/img/logo-css.png" alt="">
+                  <img src="./public/img/logo-sass.png" alt="">
+                  <img src="./public/img/logo-javascript.png" alt="">
+                </div>
+                <p>Lors de mon apprentissage j'ai mis au point une application météo avec geolocalisation. <br>
+                  Elle possède un fond d'ecran dynamique qui reagi en fonction de la météo actuelle. <br>
+                  Elle possède également la prediction sur 7 jour ainsi que la prévision heure par heure.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="content-card">
-        <h3 class="padding-bottom">App meteo</h3>
-        <div class="padding-bottom">
-          <P class="bold padding-bottom">Les technos utilisées</P>
-          <img src="./public/img/logo-HTML.png" alt="">
-          <img src="./public/img/logo-css.png" alt="">
-          <img src="./public/img/logo-sass.png" alt="">
-          <img src="./public/img/logo-javascript.png" alt="">
-        </div>
-        <p>Lors de mon apprentissage j'ai mis au point une application météo avec geolocalisation. <br>
-          Elle possède un fond d'ecran dynamique qui reagi en fonction de la météo actuelle. <br>
-          Elle possède également la prediction sur 7 jour ainsi que la prévision heure par heure.
-        </p>
+        <div class="swiper-pagination"></div>
       </div>
     </section>
-  </main>
+    <!-- Contact -->
+    <div class="section-contact card-style margin-top35 card-style" id="sectionContact">
+      <h2 class="">Me contacter</h2>
+      <form action="#" method="POST" id="monform">
+        <div class="group">
+          <label for="nom">Nom </label>
+          <input type="text" name="nom" id="nom">
+        </div>
+        <div class="group">
+          <label for="prenom">Prénom </label>
+          <input type="text" name="prenom" id="prenom">
+        </div>
+        <div class="group">
+          <label for="autre">Sujet </label>
+          <input type="text" name="autre" id="autre">
+        </div>
+        <div class="group">
+          <label for="entreprise">Entreprise </label>
+          <input type="text" name="entreprise" id="entreprise">
+        </div>
+        <div class="group">
+          <label for="email">Email </label>
+          <input type="email" name="email" id="email">
+        </div>
+        <div class="group">
+          <label for="message">Votre message</label>
+          <textarea name="" id="" cols="20" rows="10"></textarea>
+        </div>
+        <div>
+          <input type="submit" value="Soumettre votre message" class="btn">
+        </div>
+      </form>
+    </div>
 
+  </main>
+  <footer>
+  </footer>
   <script type="module" src="./public/js/script.js" defer></script>
 </body>
 

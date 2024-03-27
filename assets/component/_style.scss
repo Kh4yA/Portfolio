@@ -1,7 +1,7 @@
 //nav
 .legend {
   position: fixed;
-  width: 100vw;
+  width: 100%;
   top: 30%;
   .contact {
     a {
@@ -13,12 +13,31 @@
   }
   .sommary {
     ul {
-      li {
+      width: 100px;
+      li{
         margin-bottom: 20px;
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        border: 1px solid white;
+        background: rgba(255, 255, 255, 0.2);
+        a{
+          color: black;
+          font-weight: 500;
+        }
+      }
+      .btn-oval{
+        position: relative;
+        right: 70px;
+        width: 120px;
+        height: 50px;
+        border-radius: 25px;
+        background-color: $secondary-color;
+        border: 1px solid $secondary-color;
+        a{
+          color: white;
+          font-size: 1.3rem;
+          font-weight: 200;
+        }
       }
     }
     .scroll-down {
@@ -32,8 +51,8 @@
 .nom {
   text-align: left;
   margin-left: 45%;
-  margin-top: 15%;
-  width: 35%;
+  margin-top: 25%;
+  width: 40%;
   height: 100vh;
   h2 {
     font-weight: 100;
@@ -55,14 +74,14 @@
 
 .bg-color {
   background-color: $secondary-color;
-  transition: all 0.3s ease;
+  transition: all .3s ease-out;
 }
+
 //competence
 .competence {
-  background-color: $color-card;
   padding: 10px;
   border-radius: 20px;
-  width: 90%;
+  width: 80%;
   h2 {
     text-align: center;
     margin: 10%;
@@ -71,26 +90,134 @@
     width: 100px;
   }
 }
-//projet
-.projet {
-  background-color: $color-card;
-  overflow: hidden;
-  padding: 20px;
-  border-radius: 15px;
-  width: 90%;
-}
+//swiper
 .swiper {
+  width: 80%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: #000;
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.swiper-pagination-bullet-active {
+  color: #fff;
+  background: #007aff;
+}
+//Psection projet
+.section-projet{
+  width: 80%;
+  height: 90vh;
+  margin-bottom: 30px;
+  h2{
+    text-align: center;
+  }
+  .projet{
+    .image-card
+    {
   width: 100%;
-  height: auto;
-}
-//projet app meteo
-.image-card {
-  width: 50%;
-}
-.content-card {
-  width: 50%;
-  gap: 30px;
-  img {
-    width: 28px;
+      img{
+        border-radius: 10px;
+      }
+    }
+    .content-card{
+      width: 100%;
+      img{
+        width: 28px;
+      }
+    }
   }
 }
+//section Contact
+.section-contact{
+  width: 80%;
+  padding: 15px;
+  h2{
+    text-align: center;
+  }
+  form{
+    padding-top: 50px;
+    .group{
+      position: relative;
+      display: flex;
+      margin-bottom: 50px;
+      label{
+        position: absolute;
+        color: #000;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+        color: #aaa;
+        font-size: 20px;
+        transition: all .4s ease-out;
+        
+      }
+      input,textarea{
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        width: 80%;
+        padding: 10px 0;
+        border: none;
+        outline: none;
+        background: none;
+        border-bottom: 3px solid $primary-color;
+        transition: all .4s ease-out;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 100;
+
+
+      }
+      textarea{
+        background: #00000020;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+  #monform .group:focus-within label,
+  #monform .group.animation label{
+    top: 0;
+    transform: translateY(-100%);
+    color: $secondary-color;
+  }
+  #monform .group:focus-within input,
+  #monform .group.animation input{
+border-bottom-color:$secondary-color ;
+  }
+  #monform :nth-child(7){
+    width: 100%;
+    text-align: center;
+  }
+  .btn{
+    color: $secondary-color;
+    width: 300px;
+    height: 50px;
+    border-radius: 25px;
+    border-color: $secondary-color;
+    background: #00000020;
+    font-size: 20px;
+    background-image: linear-gradient(to right, transparent 50%,white, $secondary-color 50%);
+    background-size: 200%;
+    cursor: pointer;
+    transition: all .5s ease;
+  }
+  .btn:hover{
+    color:white;
+    background-position: 100%;
+  }

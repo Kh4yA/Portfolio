@@ -89,12 +89,17 @@ a {
     font-family: "Roboto", sans-serif;*/
 /* --------------------key frames DEV -------------------------*/
 /*generalité*/
+html {
+  scroll-behavior: smooth;
+}
+
 h1 {
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 700;
 }
 
-h2, h3 {
+h2,
+h3 {
   font-family: "Roboto Condensed", sans-serif;
   font-size: 3em;
   color: white;
@@ -179,11 +184,11 @@ body {
 
 .card-style {
   border-radius: 30px;
-  background-color: #1a1a1a;
-  background: rgba(255, 255, 255, 0.15);
+  background-color: white;
+  background: rgba(255, 255, 255, 0.044);
   box-shadow: 0 8px 32px 0 rgba(34, 115, 255, 0.1);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
@@ -199,19 +204,40 @@ header {
 
 .legend {
   position: fixed;
-  width: 100vw;
+  width: 100%;
   top: 30%;
 }
 .legend .contact a img {
   margin-left: 80px;
   width: 50px;
 }
+.legend .sommary ul {
+  width: 100px;
+}
 .legend .sommary ul li {
   margin-bottom: 20px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 1px solid white;
+  background: rgba(255, 255, 255, 0.2);
+}
+.legend .sommary ul li a {
+  color: black;
+  font-weight: 500;
+}
+.legend .sommary ul .btn-oval {
+  position: relative;
+  right: 70px;
+  width: 120px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #2272ff;
+  border: 1px solid #2272ff;
+}
+.legend .sommary ul .btn-oval a {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 200;
 }
 .legend .sommary .scroll-down {
   position: relative;
@@ -223,8 +249,8 @@ header {
 .nom {
   text-align: left;
   margin-left: 45%;
-  margin-top: 15%;
-  width: 35%;
+  margin-top: 25%;
+  width: 40%;
   height: 100vh;
 }
 .nom h2 {
@@ -247,14 +273,13 @@ header {
 
 .bg-color {
   background-color: #2272ff;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-out;
 }
 
 .competence {
-  background-color: #1a1a1a;
   padding: 10px;
   border-radius: 20px;
-  width: 90%;
+  width: 80%;
 }
 .competence h2 {
   text-align: center;
@@ -264,29 +289,135 @@ header {
   width: 100px;
 }
 
-.projet {
-  background-color: #1a1a1a;
-  overflow: hidden;
-  padding: 20px;
-  border-radius: 15px;
-  width: 90%;
-}
-
 .swiper {
+  width: 80%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: #000;
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.swiper-pagination-bullet-active {
+  color: #fff;
+  background: #007aff;
+}
+
+.section-projet {
+  width: 80%;
+  height: 90vh;
+  margin-bottom: 30px;
+}
+.section-projet h2 {
+  text-align: center;
+}
+.section-projet .projet .image-card {
   width: 100%;
-  height: auto;
 }
-
-.image-card {
-  width: 50%;
+.section-projet .projet .image-card img {
+  border-radius: 10px;
 }
-
-.content-card {
-  width: 50%;
-  gap: 30px;
+.section-projet .projet .content-card {
+  width: 100%;
 }
-.content-card img {
+.section-projet .projet .content-card img {
   width: 28px;
+}
+
+.section-contact {
+  width: 80%;
+  padding: 15px;
+}
+.section-contact h2 {
+  text-align: center;
+}
+.section-contact form {
+  padding-top: 50px;
+}
+.section-contact form .group {
+  position: relative;
+  display: flex;
+  margin-bottom: 50px;
+}
+.section-contact form .group label {
+  position: absolute;
+  color: #000;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: #aaa;
+  font-size: 20px;
+  transition: all 0.4s ease-out;
+}
+.section-contact form .group input, .section-contact form .group textarea {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  width: 80%;
+  padding: 10px 0;
+  border: none;
+  outline: none;
+  background: none;
+  border-bottom: 3px solid #1d1d1d;
+  transition: all 0.4s ease-out;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 100;
+}
+.section-contact form .group textarea {
+  background: rgba(0, 0, 0, 0.1254901961);
+  border-radius: 10px;
+}
+
+#monform .group:focus-within label,
+#monform .group.animation label {
+  top: 0;
+  transform: translateY(-100%);
+  color: #2272ff;
+}
+
+#monform .group:focus-within input,
+#monform .group.animation input {
+  border-bottom-color: #2272ff;
+}
+
+#monform :nth-child(7) {
+  width: 100%;
+  text-align: center;
+}
+
+.btn {
+  color: #2272ff;
+  width: 300px;
+  height: 50px;
+  border-radius: 25px;
+  border-color: #2272ff;
+  background: rgba(0, 0, 0, 0.1254901961);
+  font-size: 20px;
+  background-image: linear-gradient(to right, transparent 50%, white, #2272ff 50%);
+  background-size: 200%;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.btn:hover {
+  color: white;
+  background-position: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
