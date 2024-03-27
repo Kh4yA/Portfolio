@@ -261,7 +261,7 @@ header {
 }
 
 .img-moi {
-  z-index: -5;
+  z-index: 5;
   position: fixed;
   bottom: -60vh;
   left: -10%;
@@ -418,6 +418,14 @@ header {
 .btn:hover {
   color: white;
   background-position: 100%;
+}
+
+footer {
+  width: 100%;
+  height: 20vh;
+  background-color: 333;
+  border-top: 1px solid #2272ff;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

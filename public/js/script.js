@@ -104,8 +104,9 @@ let animatIntersect = function (entries, observer) {
       modifBtnRemove(btnCompetence,competence,"bg-color","btn-oval","2")
       modifBtnRemove(btnProjet,projet,"bg-color","btn-oval","3")
       modifBtnActive(btnContact,contact,'bg-color', 'btn-oval','Contact')
+      scrollDown.classList.remove('d-none')
+    }else if(entry.target.id === 'sectionFooter' && entry.isIntersecting){
       scrollDown.classList.add('d-none')
-    }else{
     }
   })
 }
@@ -114,6 +115,7 @@ observer.observe(document.getElementById('sectionAccueil'))
 observer.observe(document.getElementById('sectionCompetence'))
 observer.observe(document.getElementById('sectionProjet'))
 observer.observe(document.getElementById('sectionContact'))
+observer.observe(document.getElementById('sectionFooter'))
 
 
 
