@@ -290,15 +290,27 @@ body {
 
 /*Header*/
 header {
+  z-index: 1000;
   position: sticky;
   top: 0;
   width: 100%;
-  height: 100px;
+  height: 7vh;
   padding: 0 2%;
+}
+header h2 {
+  font-size: clamp(2rem, 1.79vw + 0.852rem, 3rem);
+}
+@media screen and (max-width: 579px) {
+  header {
+    position: fixed;
+    background-color: #000;
+    border-bottom: 1px solid #2272ff;
+    padding: 0 20px;
+  }
 }
 
 .legend {
-  z-index: 1;
+  z-index: -1‡;
   position: fixed;
   width: 100%;
   top: 30%;
@@ -307,21 +319,27 @@ header {
   margin-left: 80px;
   width: 50px;
 }
-.legend .sommary ul {
+@media all and (max-width: 579px) {
+  .legend .contact {
+    display: none;
+  }
+}
+
+.sommary ul {
   width: 100px;
 }
-.legend .sommary ul li {
+.sommary ul li {
   margin-bottom: 20px;
   width: 50px;
   height: 50px;
-  border-radius: 50%;
+  border-radius: 50px;
   background: rgba(255, 255, 255, 0.2);
 }
-.legend .sommary ul li a {
+.sommary ul li a {
   color: black;
   font-weight: 500;
 }
-.legend .sommary ul .btn-oval {
+.sommary ul .btn-oval {
   position: relative;
   right: 70px;
   width: 120px;
@@ -330,16 +348,71 @@ header {
   background-color: #2272ff;
   border: 1px solid #2272ff;
 }
-.legend .sommary ul .btn-oval a {
+.sommary ul .btn-oval a {
   color: white;
   font-size: 1.3rem;
   font-weight: 200;
 }
-.legend .sommary .scroll-down {
+.sommary .scroll-down {
   position: relative;
   top: 28vh;
   left: -20px;
   transform: rotate(90deg);
+}
+.sommary .contact-mobile, .sommary .mobile {
+  display: none;
+}
+@media all and (max-width: 579px) {
+  .sommary #contact, .sommary #project, .sommary #acceuil, .sommary #competences {
+    display: none;
+  }
+  .sommary .mobile {
+    display: block;
+    color: #fff;
+    font-weight: 100;
+  }
+  .sommary ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 60vh;
+    padding: 10px;
+    width: 100%;
+  }
+  .sommary ul li {
+    width: 120px;
+    height: 50px;
+  }
+  .sommary ul li a {
+    color: white;
+  }
+  .sommary ul .btn-oval {
+    position: static;
+    right: 0;
+    width: 120px;
+    height: 50px;
+    font-weight: 100;
+  }
+  .sommary .scroll-down {
+    display: none;
+  }
+  .sommary .contact-mobile {
+    position: fixed;
+    flex-direction: row;
+    top: 80vh;
+  }
+  .sommary .contact-mobile a img {
+    margin-left: 80px;
+    width: 50px;
+  }
+}
+@media all and (max-width: 579px) and (max-width: 579px) {
+  .sommary .contact-mobile a img {
+    width: 35px;
+    margin-left: 20px;
+  }
 }
 
 .nom {
@@ -355,11 +428,12 @@ header {
 @media all and (max-width: 579px) {
   .nom {
     width: 80%;
+    padding-left: 30px;
   }
 }
 
 .img-moi {
-  z-index: 5;
+  z-index: _2;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -398,6 +472,11 @@ header {
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 100px;
+}
+@media all and (max-width: 569px) {
+  .competence .competence-grid {
+    column-gap: 20px;
+  }
 }
 .competence img {
   width: 100px;
@@ -453,6 +532,7 @@ header {
 }
 
 .section-contact {
+  z-index: 2;
   width: 100%;
   padding: 15px;
 }
@@ -532,6 +612,12 @@ header {
 .btn input {
   font-weight: 100;
 }
+@media all and (max-width: 569px) {
+  .btn {
+    width: 200px;
+    font-size: 16px;
+  }
+}
 
 .btn:hover {
   color: white;
@@ -544,12 +630,17 @@ footer {
   text-align: center;
   height: 5vh;
   padding: 10px;
-  background-color: 333;
+  background-color: #000;
   border-top: 1px solid #2272ff;
   color: #fff;
 }
 footer span {
   color: #2272ff;
+}
+@media all and (max-width: 579px) {
+  footer p {
+    font-size: 12px;
+  }
 }
 
 /* version mobile */
@@ -558,35 +649,26 @@ footer span {
     margin: 41vh 5vw 0 0;
   }
   .sommary {
-    display: none;
+    z-index: -1;
     position: fixed;
     right: 0;
-    top: 0;
-    width: 50vw;
-    height: 100vh;
-    background: #333;
+    top: 7vh;
+    width: 200px;
+    height: 93vh;
+    padding-top: 50px;
+    background: #000;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(19px);
     -webkit-backdrop-filter: blur(19px);
     border-radius: 10px 0 0 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid #2272ff;
+    transform: translateX(200px);
+    transition: all 0.4s ease;
   }
   .sommary.active {
     display: block;
-  }
-  .scroll-down {
-    display: none;
-  }
-  .navbar {
-    display: none;
-  }
-  .sommary ul li a {
-    width: 36px;
-    height: 36px;
-    display: none;
-  }
-  .sommary ul li p {
-    width: 35vw;
+    transition: all 0.4s ease;
+    transform: translateX(0);
   }
   .burger {
     position: relative;
@@ -627,14 +709,10 @@ footer span {
     transform: rotate(-45deg);
     background-color: red;
   }
-  .image-card {
-    width: 100%;
-  }
-  .content-card {
-    width: 100%;
-  }
-  .projet {
-    width: 80%;
+}
+@media all and (max-width: 579px) and (max-width: 579px) {
+  .legend .contact-mobile {
+    display: block;
   }
 }
 
