@@ -300,7 +300,7 @@ header {
 header h2 {
   font-size: clamp(2rem, 1.79vw + 0.852rem, 3rem);
 }
-@media screen and (max-width: 579px) {
+@media screen and (max-width: 900px) {
   header {
     position: fixed;
     background-color: #000;
@@ -310,21 +310,34 @@ header h2 {
 }
 
 .legend {
-  z-index: -1‡;
+  z-index: 10;
   position: fixed;
-  width: 100%;
-  top: 30%;
+  right: 0;
+  width: 80px;
+  top: 25%;
+}
+.legend .mobile {
+  display: none;
+}
+.legend .contact {
+  position: fixed;
+  top: 25%;
+  left: 0;
 }
 .legend .contact a img {
   margin-left: 80px;
   width: 50px;
 }
-@media all and (max-width: 579px) {
+@media all and (max-width: 900px) {
   .legend .contact {
-    display: none;
+    top: 70%;
+    gap: 30px;
   }
 }
 
+.sommary {
+  justify-content: flex-end;
+}
 .sommary ul {
   width: 100px;
 }
@@ -341,8 +354,8 @@ header h2 {
 }
 .sommary ul .btn-oval {
   position: relative;
-  right: 70px;
   width: 120px;
+  right: 70px;
   height: 50px;
   border-radius: 25px;
   background-color: #2272ff;
@@ -356,14 +369,14 @@ header h2 {
 .sommary .scroll-down {
   position: relative;
   top: 28vh;
-  left: -20px;
+  left: -30px;
   transform: rotate(90deg);
 }
-.sommary .contact-mobile, .sommary .mobile {
-  display: none;
-}
-@media all and (max-width: 579px) {
-  .sommary #contact, .sommary #project, .sommary #acceuil, .sommary #competences {
+@media all and (max-width: 900px) {
+  .sommary #contact,
+  .sommary #project,
+  .sommary #acceuil,
+  .sommary #competences {
     display: none;
   }
   .sommary .mobile {
@@ -398,21 +411,6 @@ header h2 {
   .sommary .scroll-down {
     display: none;
   }
-  .sommary .contact-mobile {
-    position: fixed;
-    flex-direction: row;
-    top: 80vh;
-  }
-  .sommary .contact-mobile a img {
-    margin-left: 80px;
-    width: 50px;
-  }
-}
-@media all and (max-width: 579px) and (max-width: 579px) {
-  .sommary .contact-mobile a img {
-    width: 35px;
-    margin-left: 20px;
-  }
 }
 
 .nom {
@@ -420,6 +418,9 @@ header h2 {
   margin-top: 10%;
   width: 40%;
   height: 100vh;
+}
+.nom p {
+  font-size: 25px;
 }
 .nom h2 {
   font-weight: 100;
@@ -431,9 +432,15 @@ header h2 {
     padding-left: 30px;
   }
 }
+@media all and (max-width: 900px) {
+  .nom {
+    padding-left: 40%;
+    width: 60%;
+  }
+}
 
 .img-moi {
-  z-index: _2;
+  z-index: 1;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -512,6 +519,7 @@ header h2 {
 }
 
 .section-projet {
+  z-index: 0;
   width: 100%;
   margin-bottom: 30px;
 }
@@ -532,7 +540,6 @@ header h2 {
 }
 
 .section-contact {
-  z-index: 2;
   width: 100%;
   padding: 15px;
 }
@@ -558,7 +565,8 @@ header h2 {
   font-size: 20px;
   transition: all 0.4s ease-out;
 }
-.section-contact form .group input, .section-contact form .group textarea {
+.section-contact form .group input,
+.section-contact form .group textarea {
   margin-right: auto;
   margin-left: auto;
   display: block;
@@ -644,12 +652,12 @@ footer span {
 }
 
 /* version mobile */
-@media all and (max-width: 579px) {
+@media all and (max-width: 900px) {
   .nom {
     margin: 41vh 5vw 0 0;
   }
   .sommary {
-    z-index: -1;
+    z-index: 1000;
     position: fixed;
     right: 0;
     top: 7vh;
@@ -666,6 +674,7 @@ footer span {
     transition: all 0.4s ease;
   }
   .sommary.active {
+    z-index: 1O;
     display: block;
     transition: all 0.4s ease;
     transform: translateX(0);
@@ -708,11 +717,6 @@ footer span {
     top: 0;
     transform: rotate(-45deg);
     background-color: red;
-  }
-}
-@media all and (max-width: 579px) and (max-width: 579px) {
-  .legend .contact-mobile {
-    display: block;
   }
 }
 

@@ -1,132 +1,132 @@
 //nav
+
 .legend {
-  z-index: -1‡;
+  z-index: 10;
   position: fixed;
-  width: 100%;
-  top: 30%;
+  right: 0;
+  width: 80px;
+  top: 25%;
+  .mobile{
+    display: none;
+  }
   .contact {
+    position: fixed;
+    top: 25%;
+    left: 0;
     a {
       img {
         margin-left: 80px;
         width: 50px;
       }
     }
-    @media all and (max-width:579px) {
-      display: none;
+    @media all and (max-width:900px) {
+      top: 70%;
+      gap: 30px;
     }
   }
 }
 
-  .sommary {
-    ul {
-      width: 100px;
-      li{
-        margin-bottom: 20px;
-        width: 50px;
-        height: 50px;
-        border-radius: 50px;
-        background: rgba(255, 255, 255, 0.2);
-        a{
-          color: black;
-          font-weight: 500;
-        }
+.sommary {
+  justify-content: flex-end;
+  ul {
+    width: 100px;
+    li {
+      margin-bottom: 20px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50px;
+      background: rgba(255, 255, 255, 0.2);
+      a {
+        color: black;
+        font-weight: 500;
       }
-      .btn-oval{
-        position: relative;
-        right: 70px;
+    }
+    .btn-oval {
+      position: relative;
+      width: 120px;
+      right: 70px;
+      height: 50px;
+      border-radius: 25px;
+      background-color: $secondary-color;
+      border: 1px solid $secondary-color;
+      a {
+        color: white;
+        font-size: 1.3rem;
+        font-weight: 200;
+      }
+    }
+  }
+  .scroll-down {
+    position: relative;
+    top: 28vh;
+    left: -30px;
+    transform: rotate(90deg);
+  }
+  @media all and (max-width: 900px) {
+    #contact,
+    #project,
+    #acceuil,
+    #competences {
+      display: none;
+    }
+    .mobile {
+      display: block;
+      color: #fff;
+      font-weight: 100;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      height: 60vh;
+      padding: 10px;
+      width: 100%;
+      li {
         width: 120px;
         height: 50px;
-        border-radius: 25px;
-        background-color: $secondary-color;
-        border: 1px solid $secondary-color;
-        a{
+        a {
           color: white;
-          font-size: 1.3rem;
-          font-weight: 200;
         }
+      }
+      .btn-oval {
+        position: static;
+        right: 0;
+        width: 120px;
+        height: 50px;
+        font-weight: 100;
       }
     }
     .scroll-down {
-      position: relative;
-      top: 28vh;
-      left: -20px;
-      transform: rotate(90deg);
-    }
-    .contact-mobile,.mobile{
       display: none;
     }
-    @media all and (max-width: 579px) {
-      #contact,#project,#acceuil,#competences{
-        display: none;
-      }
-      .mobile{
-        display: block;
-        color: #fff;
-        font-weight: 100;
-      }
-      ul {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 30px;
-        height: 60vh;
-        padding: 10px;
-        width: 100%;
-        li {
-          width: 120px;
-          height: 50px;
-          a {
-            color: white;
-          }
-        }
-        .btn-oval{
-          position: static;
-          right: 0;
-          width: 120px;
-          height: 50px;
-          font-weight: 100;
-        }
-    
-      }
-      .scroll-down {
-        display: none;
-      }
-      .contact-mobile {
-        position: fixed;
-        flex-direction: row;
-        top: 80vh;
-        a {
-          img {
-            margin-left: 80px;
-            width: 50px;
-            @media all and (max-width: 579px) {
-              width: 35px;
-              margin-left: 20px;
-            }
-          }
-        }
-      }
-    
-    }
   }
+}
 
 .nom {
   margin-left: 40%;
   margin-top: 10%;
   width: 40%;
   height: 100vh;
+  p {
+    font-size: 25px;
+  }
   h2 {
     font-weight: 100;
     font-size: clamp(3rem, 14.765vw - 6.468rem, 11.25rem);
   }
-  @media all and (max-width:579px) {
+  @media all and (max-width: 579px) {
     width: 80%;
     padding-left: 30px;
   }
+  @media all and (max-width: 900px) {
+    padding-left: 40%;
+    width: 60%;
+  }
 }
 .img-moi {
-  z-index: _2;
+  z-index: 1;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -136,38 +136,37 @@
   filter: drop-shadow(1px 1px 15px #000000);
   transition: transform 1s ease;
   transform-origin: bottom left;
-  img{
+  img {
     width: 100%;
   }
 }
-.img-moi.reduit{
+.img-moi.reduit {
   transition: transform 1s ease;
- transform: scale(0.4);
- transform-origin: bottom left;
-
+  transform: scale(0.4);
+  transform-origin: bottom left;
 }
 .bg-color {
   background-color: $secondary-color;
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 //competence
 .competence {
   width: 100%;
-  h2{
+  h2 {
     width: 100%;
     text-align: center;
   }
-.competence-grid{
-  padding-top: 50px;
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 100px;
-  @media all and (max-width:569px) {
-    column-gap: 20px;
+  .competence-grid {
+    padding-top: 50px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 100px;
+    @media all and (max-width: 569px) {
+      column-gap: 20px;
+    }
   }
-}
   img {
     width: 100px;
   }
@@ -201,43 +200,43 @@
   background: #007aff;
 }
 //Psection projet
-.section-projet{
+.section-projet {
+  z-index: 0;
   width: 100%;
   margin-bottom: 30px;
-  h2{
+  h2 {
     text-align: center;
   }
-  .projet{
-    .image-card
-    {
-  width: 100%;
-      img{
+  .projet {
+    .image-card {
+      width: 100%;
+      img {
         border-radius: 10px;
       }
     }
-    .content-card{
+    .content-card {
       width: 100%;
-      img{
+      img {
         width: 28px;
       }
     }
   }
 }
+
 //section Contact
-.section-contact{
-  z-index: 2;
+.section-contact {
   width: 100%;
   padding: 15px;
-  h2{
+  h2 {
     text-align: center;
   }
-  form{
+  form {
     padding-top: 50px;
-    .group{
+    .group {
       position: relative;
       display: flex;
       margin-bottom: 50px;
-      label{
+      label {
         position: absolute;
         color: #000;
         top: 50%;
@@ -246,10 +245,10 @@
         transform: translateY(-50%);
         color: #aaa;
         font-size: 20px;
-        transition: all .4s ease-out;
-        
+        transition: all 0.4s ease-out;
       }
-      input,textarea{
+      input,
+      textarea {
         margin-right: auto;
         margin-left: auto;
         display: block;
@@ -259,75 +258,78 @@
         outline: none;
         background: none;
         border-bottom: 3px solid $primary-color;
-        transition: all .4s ease-out;
+        transition: all 0.4s ease-out;
         color: #fff;
         font-size: 20px;
         font-weight: 100;
-
-
       }
-      textarea{
+      textarea {
         background: #00000020;
         border-radius: 10px;
       }
     }
   }
 }
-  #monform .group:focus-within label,
-  #monform .group.animation label{
-    top: 0;
-    transform: translateY(-100%);
-    color: $secondary-color;
-  }
-  #monform .group:focus-within input,
-  #monform .group.animation input{
-border-bottom-color:$secondary-color ;
-  }
-  #monform :nth-child(7){
-    width: 100%;
-    text-align: center;
-  }
-  .btn{
-    color: $secondary-color;
-    width: 300px;
-    height: 50px;
-    border-radius: 25px;
-    border-color: $secondary-color;
-    background: #00000020;
-    font-size: 20px;
-    font-weight: 100;
-    background-image: linear-gradient(to right, transparent 50%,white, $secondary-color 50%);
-    background-size: 200%;
-    cursor: pointer;
-    transition: all .5s ease;
-    input{
-      font-weight: 100;
-    }
-    @media all and (max-width:569px) {
-      width: 200px;
-      font-size: 16px;
-    }
-  }
-  .btn:hover{
-    color:white;
-    background-position: 100%;
+#monform .group:focus-within label,
+#monform .group.animation label {
+  top: 0;
+  transform: translateY(-100%);
+  color: $secondary-color;
+}
+#monform .group:focus-within input,
+#monform .group.animation input {
+  border-bottom-color: $secondary-color;
+}
+#monform :nth-child(7) {
+  width: 100%;
+  text-align: center;
+}
+.btn {
+  color: $secondary-color;
+  width: 300px;
+  height: 50px;
+  border-radius: 25px;
+  border-color: $secondary-color;
+  background: #00000020;
+  font-size: 20px;
+  font-weight: 100;
+  background-image: linear-gradient(
+    to right,
+    transparent 50%,
+    white,
+    $secondary-color 50%
+  );
+  background-size: 200%;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  input {
     font-weight: 100;
   }
-  //footer
-  footer{
-    width: 100%;
-    text-align: center;
-    height: 5vh;
-    padding: 10px;
-    background-color: #000;
-    border-top: 1px solid $secondary-color;
-    color: #fff;
-    span{
-      color: $secondary-color;
-    }
-    p{
-      @media all and (max-width:579px) {
-        font-size: 12px;
-      }
+  @media all and (max-width: 569px) {
+    width: 200px;
+    font-size: 16px;
+  }
+}
+.btn:hover {
+  color: white;
+  background-position: 100%;
+  font-weight: 100;
+}
+//footer
+footer {
+  width: 100%;
+  text-align: center;
+  height: 5vh;
+  padding: 10px;
+  background-color: #000;
+  border-top: 1px solid $secondary-color;
+  color: #fff;
+  span {
+    color: $secondary-color;
+  }
+  p {
+    @media all and (max-width: 579px) {
+      font-size: 12px;
     }
   }
+}

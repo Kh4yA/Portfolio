@@ -9,7 +9,7 @@ header {
   h2{
     font-size: clamp(2rem, 1.79vw + 0.852rem, 3rem);
   }
-  @media screen and (max-width:579px){
+  @media screen and (max-width:900px){
     position: fixed;
     background-color: #000;
     border-bottom:1px solid$secondary-color;
