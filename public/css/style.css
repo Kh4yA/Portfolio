@@ -340,7 +340,6 @@ header h2 {
 @media all and (max-width: 900px) {
   .legend .contact {
     top: 60%;
-    gap: 1Ò0px;
   }
 }
 
