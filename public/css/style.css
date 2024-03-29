@@ -288,6 +288,15 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
+.lien-projet {
+  text-decoration: underline;
+  color: #2272ff;
+  font-weight: 100;
+}
+.lien-projet:hover {
+  transform: scale(1.2);
+}
+
 /*Header*/
 header {
   z-index: 1000;
@@ -330,8 +339,8 @@ header h2 {
 }
 @media all and (max-width: 900px) {
   .legend .contact {
-    top: 70%;
-    gap: 30px;
+    top: 60%;
+    gap: 1Ò0px;
   }
 }
 

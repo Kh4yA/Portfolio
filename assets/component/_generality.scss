@@ -140,3 +140,11 @@ body {
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
+.lien-projet{
+  text-decoration: underline;
+  color: $secondary-color;
+  font-weight: 100;
+  &:hover{
+    transform: scale(1.2);
+  }
+}
