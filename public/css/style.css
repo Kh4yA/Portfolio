@@ -253,7 +253,17 @@ body {
 }
 @media all and (max-width: 1550px) {
   .container {
-    width: 70%;
+    width: 90%;
+  }
+}
+@media all and (max-width: 1000px) {
+  .container {
+    width: 80%;
+  }
+}
+@media all and (max-width: 579px) {
+  .container {
+    width: 95%;
   }
 }
 
@@ -274,7 +284,7 @@ body {
 }
 
 .padding20 {
-  padding: 20px;
+  padding: 20px 0;
 }
 
 .card-style {
@@ -312,8 +322,6 @@ header h2 {
 @media screen and (max-width: 900px) {
   header {
     position: fixed;
-    background-color: #000;
-    border-bottom: 1px solid #2272ff;
     padding: 0 20px;
     height: 10vh;
     align-items: center;
@@ -401,7 +409,8 @@ header h2 {
   .sommary .mobile {
     display: block;
     color: #fff;
-    font-weight: 100;
+    font-weight: 200;
+    font-family: "Roboto Condensed", sans-serif;
   }
   .sommary ul {
     display: flex;
@@ -673,15 +682,17 @@ footer span {
 /* version mobile */
 @media all and (max-width: 900px) {
   .nom {
-    margin: 41vh 5vw 0 0;
+    margin: 35vh 20% 0 auto;
+  }
+  .nom p {
+    font-size: 18px;
   }
   .sommary {
-    z-index: 1000;
     position: fixed;
     right: 0;
-    top: 7vh;
+    top: 0;
     width: 200px;
-    height: 93vh;
+    height: 100vh;
     padding-top: 50px;
     background: #000;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -693,7 +704,6 @@ footer span {
     transition: all 0.4s ease;
   }
   .sommary.active {
-    z-index: 1O;
     display: block;
     transition: all 0.4s ease;
     transform: translateX(0);
@@ -701,10 +711,11 @@ footer span {
   .burger {
     position: relative;
     display: inline-block;
-    width: 40px;
+    width: 30px;
     height: 5px;
     background-color: #2272ff;
     border-radius: 5px;
+    transition: all 0.5s ease;
   }
   .burger::after,
   .burger::before {
@@ -713,10 +724,11 @@ footer span {
     transform-origin: center;
     position: absolute;
     width: 40px;
+    right: 0px;
     height: 5px;
     background-color: #fff;
     border-radius: 5px;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
   }
   .burger::after {
     top: 10px;
@@ -725,7 +737,9 @@ footer span {
     top: -10px;
   }
   .burger.open {
-    background-color: transparent;
+    width: 0;
+    transform: translateX(0);
+    transition: all 0.5s ease;
   }
   .burger.open::after {
     top: 0;
@@ -736,6 +750,9 @@ footer span {
     top: 0;
     transform: rotate(-45deg);
     background-color: red;
+  }
+  .delay-1 {
+    transition-delay: 0.5s;
   }
 }
 

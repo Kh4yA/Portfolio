@@ -16,22 +16,24 @@ let scrollDown = document.querySelector('.scroll')
 let inputs = document.querySelectorAll('input')
 let textarea = document.querySelector('textarea')
 let photoMoi = document.querySelector('.img-moi')
-for (let i =0;i<inputs.length;i++){
+let templateProjet = document.querySelector('.template-projet')
+for (let i = 0; i < inputs.length; i++) {
   let input = inputs[i]
-  input.addEventListener('input', (e)=>{
-    if(e.target.value !== ""){
+  input.addEventListener('input', (e) => {
+    if (e.target.value !== "") {
       e.target.parentNode.classList.add('animation')
-    }else if (e.target.value === ""){
+    } else if (e.target.value === "") {
       e.target.parentNode.classList.remove('animation')
     }
   })
 }
-textarea.addEventListener('input', (e)=>{
-  if(e.target.value !== ""){
+textarea.addEventListener('input', (e) => {
+  if (e.target.value !== "") {
     e.target.parentNode.classList.add('animation')
-  }else if (e.target.value === ""){
+  } else if (e.target.value === "") {
     e.target.parentNode.classList.remove('animation')
-}})
+  }
+})
 /**
  * Function qui ajout une classe au bouton et modifie le text
  * @param {string} name1 
@@ -41,7 +43,7 @@ textarea.addEventListener('input', (e)=>{
  * @param {string} text 
  * return rien
  */
-function modifBtnActive (name1, name2 ,class1, class2, text) {
+function modifBtnActive(name1, name2, class1, class2, text) {
   name1.classList.add(class1, class2)
   name2.innerText = text
 }
@@ -54,11 +56,11 @@ function modifBtnActive (name1, name2 ,class1, class2, text) {
  * @param {string} text 
  * return rien
  */
-function modifBtnRemove (name1, name2,class1, class2, text) {
+function modifBtnRemove(name1, name2, class1, class2, text) {
   name1.classList.remove(class1, class2)
   name2.innerText = text
 }
-openBurger.addEventListener('click',()=>{
+openBurger.addEventListener('click', () => {
   burger.classList.toggle('open')
   sommary.classList.toggle('active')
 })
@@ -69,6 +71,10 @@ let swiper = new Swiper(".mySwiper", {
     clickable: true,
     renderBullet: function (index, className) {
       return '<span class="' + className + '">' + (index + 1) + "</span>";
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
   },
 });
@@ -85,35 +91,35 @@ let animatIntersect = function (entries, observer) {
   entries.forEach((entry, pos) => {
     console.log(entry.intersectionRatio);
     if (entry.target.id === "sectionAccueil" && entry.isIntersecting && entry.intersectionRatio) {
-      modifBtnActive(btnAcceuil,acceuil,"bg-color","btn-oval","Acceuil")
-      modifBtnRemove(btnCompetence,competence,"bg-color","btn-oval","2")
-      modifBtnRemove(btnProjet,projet,"bg-color","btn-oval","3")
-      modifBtnRemove(btnContact,contact,"bg-color","btn-oval","4")
+      modifBtnActive(btnAcceuil, acceuil, "bg-color", "btn-oval", "Accueil")
+      modifBtnRemove(btnCompetence, competence, "bg-color", "btn-oval", "2")
+      modifBtnRemove(btnProjet, projet, "bg-color", "btn-oval", "3")
+      modifBtnRemove(btnContact, contact, "bg-color", "btn-oval", "4")
       scrollDown.classList.remove('d-none')
       photoMoi.classList.remove('reduit')
     } else if (entry.target.id === 'sectionCompetence' && entry.isIntersecting) {
-      modifBtnRemove(btnAcceuil, acceuil,"bg-color","btn-oval","1")
-      modifBtnActive(btnCompetence,competence,"bg-color","btn-oval","Technologies")
-      modifBtnRemove(btnProjet,projet,"bg-color","btn-oval","3")
-      modifBtnRemove(btnContact,contact,"bg-color","btn-oval","4")
+      modifBtnRemove(btnAcceuil, acceuil, "bg-color", "btn-oval", "1")
+      modifBtnActive(btnCompetence, competence, "bg-color", "btn-oval", "Technologies")
+      modifBtnRemove(btnProjet, projet, "bg-color", "btn-oval", "3")
+      modifBtnRemove(btnContact, contact, "bg-color", "btn-oval", "4")
       scrollDown.classList.remove('d-none')
       photoMoi.classList.add('reduit')
     } else if (entry.target.id === 'sectionProjet' && entry.isIntersecting) {
-      modifBtnRemove(btnAcceuil, acceuil,"bg-color","btn-oval","1")
-      modifBtnRemove(btnCompetence,competence,"bg-color","btn-oval","2")
-      modifBtnRemove(btnContact,contact,"bg-color","btn-oval","4")
-      modifBtnActive(btnProjet,projet,'bg-color', 'btn-oval','Projets')
+      modifBtnRemove(btnAcceuil, acceuil, "bg-color", "btn-oval", "1")
+      modifBtnRemove(btnCompetence, competence, "bg-color", "btn-oval", "2")
+      modifBtnRemove(btnContact, contact, "bg-color", "btn-oval", "4")
+      modifBtnActive(btnProjet, projet, 'bg-color', 'btn-oval', 'Projets')
       scrollDown.classList.remove('d-none')
       photoMoi.classList.add('reduit')
-    }else if (entry.target.id === 'sectionContact' && entry.isIntersecting){
+    } else if (entry.target.id === 'sectionContact' && entry.isIntersecting) {
       console.log(entry.target);
-      modifBtnRemove(btnAcceuil, acceuil,"bg-color","btn-oval","1")
-      modifBtnRemove(btnCompetence,competence,"bg-color","btn-oval","2")
-      modifBtnRemove(btnProjet,projet,"bg-color","btn-oval","3")
-      modifBtnActive(btnContact,contact,'bg-color', 'btn-oval','Contact')
+      modifBtnRemove(btnAcceuil, acceuil, "bg-color", "btn-oval", "1")
+      modifBtnRemove(btnCompetence, competence, "bg-color", "btn-oval", "2")
+      modifBtnRemove(btnProjet, projet, "bg-color", "btn-oval", "3")
+      modifBtnActive(btnContact, contact, 'bg-color', 'btn-oval', 'Contact')
       scrollDown.classList.remove('d-none')
       photoMoi.classList.add('reduit')
-    }else if(entry.target.id === 'sectionFooter' && entry.isIntersecting){
+    } else if (entry.target.id === 'sectionFooter' && entry.isIntersecting) {
       scrollDown.classList.add('d-none')
     }
   })
@@ -125,5 +131,38 @@ observer.observe(document.getElementById('sectionProjet'))
 observer.observe(document.getElementById('sectionContact'))
 observer.observe(document.getElementById('sectionFooter'))
 
-
-
+fetch("./public/projet.JSON").then(rep => {
+  return rep.json()
+}).then(datas => {
+  console.log(datas[0].techno.image1);
+  buildTemplateProjet(datas)
+})
+const buildTemplateProjet = (datas) => {
+  datas.forEach(data => {
+    console.log(data.techno.image1);
+    console.log(data.techno.image2);
+    console.log(data.techno.image3);
+    console.log(data.techno.image4);
+    templateProjet.innerHTML += `<div class="swiper-slide">
+    <div class="projet flex space-between">
+      <div class="image-card">
+        <div class=""><img src="public/img/${data.photo}" alt="image de ${data.nom}"></div>
+      </div>
+      <div class="content-card">
+        <h3 class="padding-bottom">${data.nom}</h3>
+        <p class="padding-bottom">${data.date}</p>
+        <p class="padding-bottom"><a href="${data.lien}" target="_blank"><span class="lien-projet">Lien vers le projet</span></a></p>
+        <div class="padding-bottom">
+          <P class="bold padding-bottom">Les technologies utilisées</P>
+          <img src="./public/img/${data.techno.image1}" alt="" >
+          <img src="./public/img/${data.techno.image2}" alt="" >
+          <img src="./public/img/${data.techno.image3}" alt="" >
+          <img src="./public/img/${data.techno.image4}" alt="" >
+        </div>
+        <p>${data.description}<br></p>
+      </div>
+    </div>
+</div>
+`
+  })
+}

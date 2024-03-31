@@ -112,7 +112,13 @@ body {
   margin-right: auto;
   width: 100%;
   @media all and (max-width:1550px){
-    width: 70%;
+    width: 90%;
+  }
+  @media all and (max-width:1000px){
+    width: 80%;
+  }
+  @media all and (max-width:579px){
+    width: 95%;
   }
 }
 .margin-bottom {
@@ -128,7 +134,7 @@ body {
   padding-bottom: 20px;
 }
 .padding20{
-  padding: 20px;
+  padding: 20px 0;
 }
 .card-style {
   border-radius: 30px;

@@ -79,8 +79,9 @@
     .mobile {
       display: block;
       color: #fff;
-      font-weight: 100;
-    }
+      font-weight: 200;
+      font-family: "Roboto Condensed", sans-serif;
+        }
     ul {
       display: flex;
       flex-direction: column;
@@ -109,6 +110,8 @@
       display: none;
     }
   }
+}
+.hero{
 }
 .nom {
   margin-left: 40%;

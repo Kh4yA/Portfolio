@@ -1,0 +1,76 @@
+[
+    {
+        "nom": "M'S sportwears",
+        "date": "Mars 2024",
+        "lien": "https://kh4ya.github.io/Men-Sportswear/",
+        "photo": "ms-sport.png",
+        "techno": {
+            "image1": "html-5.png",
+            "image2": "logo-css.png",
+            "image3": "logo-sass.png",
+            "image4": "logo-javascript.png"
+        },
+        "description": "M'S Sportwears est une vitrine en ligne moderne et élégante, conçue pour mettre en valeur la marque et ses produits. Avec un design épuré et une interface conviviale, le site offre une expérience utilisateur intuitive pour les visiteurs, mettant en lumière la qualité et le style des produits de la marque.Grâce à une conception responsive, le site s'adapte parfaitement à tous les appareils, offrant une expérience cohérente sur les ordinateurs de bureau, les tablettes et les smartphones."
+    },
+    {
+        "nom": "M.N.T.N",
+        "date": "Février 2024",
+        "lien": "https://kh4ya.github.io/M.N.T.N/",
+        "photo": "MNTN.png",
+        "techno": {
+            "image1": "html-5.png",
+            "image2": "logo-css.png",
+            "image4": "logo-javascript.png"
+        },
+        "description": "Pendant mon apprentissage , j'ai eu l'opportunité de concevoir une maquette de site vitrine innovante. Ce projet m'a permis d'explorer diverses techniques de design web et de mettre en pratique mes compétences en conception d'interfaces utilisateur."
+    },
+    {
+        "nom": "4 éléments",
+        "date": "fervier 2024",
+        "lien": "https://kh4ya.github.io/4-elements-dev/",
+        "photo": "4element.png",
+        "techno": {
+            "image1": "html-5.png",
+            "image2": "logo-css.png",
+            "image4": "logo-javascript.png"
+        },
+        "description": "Ce site hôtelier représente un projet significatif de mon parcours en développement web. À partir d'une maquette initiale élaborée par mes formateurs, j'ai apporté ma contribution en tant que développeur pour concrétiser cette vision dans un site web fonctionnel et esthétique. Conception fidèle à la maquette : J'ai veillé à respecter fidèlement la conception initiale tout en apportant mes compétences en développement pour garantir la cohérence et la fluidité de l'expérience utilisateur."
+    },
+    {
+        "nom": "La ruche",
+        "date": "janvier 2024",
+        "lien": "https://kh4ya.github.io/La-ruche/",
+        "photo": "La-ruche.png",
+        "techno": {
+            "image1": "html-5.png",
+            "image2": "logo-css.png"
+        },
+        "description": "\"La Ruche\" est un projet de site vitrine que j'ai développé en me concentrant sur le front-end pendant ma formation en développement web. Mon rôle principal était de créer une interface utilisateur attrayante et fonctionnelle pour représenter la communauté virtuell\"La Ruche\""
+    },
+    {
+        "nom": "App Météo",
+        "date": "Mars 2024",
+        "lien": "https://kh4ya.github.io/app-meteo-complet/",
+        "photo": "App-meteo.png",
+        "techno": {
+            "image1": "html-5.png",
+            "image2": "logo-css.png",
+            "image3": "logo-sass.png",
+            "image4": "logo-javascript.png"
+        },
+        "description": "M'S Sportwears est une vitrine en ligne moderne et élégante, conçue pour mettre en valeur la marque et ses produits. Avec un design épuré et une interface conviviale, le site offre une expérience utilisateur intuitive pour les visiteurs, mettant en lumière la qualité et le style des produits de la marque.Grâce à une conception responsive, le site s'adapte parfaitement à tous les appareils, offrant une expérience cohérente sur les ordinateurs de bureau, les tablettes et les smartphones."
+    },
+    {
+        "nom": "Hydra VR",
+        "date": "Mars 2024",
+        "lien": "https://kh4ya.github.io/hydra-Landing-Page/",
+        "photo": "hydra-vr.png",
+        "techno": {
+            "image1": "html-5.png",
+            "image2": "logo-css.png",
+            "image3": "logo-sass.png",
+            "image4": "logo-javascript.png"
+        },
+        "description": "\"Hydra VR\" représente une reproduction fidèle d'une maquette conçue par Zine E. Falouti, réalisée avec précision et attention aux détails par mes soins. Ce projet démontre mon engagement à comprendre et à mettre en œuvre les designs créatifs dans le développement web."
+    }
+]
