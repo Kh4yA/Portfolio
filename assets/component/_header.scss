@@ -7,8 +7,9 @@ header {
   height: 7vh;
   padding: 10px;
   h2{
-    width: 80px;
-
+    img{
+      width: 80px;
+    }
   }
   @media screen and (max-width:900px){
     position: fixed;

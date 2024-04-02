@@ -316,7 +316,7 @@ header {
   height: 7vh;
   padding: 10px;
 }
-header h2 {
+header h2 img {
   width: 80px;
 }
 @media screen and (max-width: 900px) {
