@@ -5,9 +5,10 @@ header {
   top: 0;
   width: 100%;
   height: 7vh;
-  padding: 0 2%;
+  padding: 10px;
   h2{
-    font-size: clamp(2rem, 1.79vw + 0.852rem, 3rem);
+    width: 80px;
+
   }
   @media screen and (max-width:900px){
     position: fixed;
