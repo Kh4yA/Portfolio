@@ -7,11 +7,24 @@
   <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.css">
   <link rel="stylesheet" href="./public/css/style.css" />
   <link rel="shortcut icon" href="./public/img/1.png" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="public/img/icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="public/img/icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="public/img/icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="public/img/icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="public/img/icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="public/img/icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="public/img/icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="public/img/icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="public/img/icon-180x180.png">
+  <link rel="icon" type="image/png" href="public/img/icon_32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="public/img/icon-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="public/img/icon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="public/img/icon-16x16.png" sizes="16x16">
   <title>Portfolio</title>
 </head>
 
-<body>
-  <div class="legend flex space-between">
+<body class="">
+  <div class="legend flex space-between" id="legend">
     <div class="sommary btn-oval flex">
       <ul>
         <li class="flex item-center justify-center" id="btnAcceuil"><a href="#sectionAccueil"><span
@@ -35,8 +48,8 @@
       </div>
     </div>
   </div>
-<!-- parallax -->
-  <div class="parallax">
+  <!-- parallax -->
+  <div class="parallax" id="parallax">
     <!-- Header -->
     <header class="header flex item-center space-between">
       <div class="logo">
@@ -57,24 +70,39 @@
 
     <main class="container">
       <section class="competence flex justify-center card-style padding20" id="sectionCompetence">
-        <h2 class="padding-bottom">Les technologies que j'utilise</h2>
-        <div class="competence-grid ">
-          <div> <img src="./public/img/html-5.png" alt="logo html"></div>
-          <div> <img src="./public/img/css-3.png" alt="logo css"></div>
-          <div> <img src="./public/img/logo-sass.png" alt=" logo sass"></div>
-          <div><img src="./public/img/javascript-simple.png" alt="logo javascript"></div>
-          <div><img src="./public/img/php-logo.png" alt="logo php"></div>
-          <div><img src="./public/img/symfony_black_03.png" alt="logo symphony"></div>
-          <div><img src="./public/img/MySQL.png" alt="logo MySQL"></div>
-          <div><img src="./public/img/react.png" alt="logo react"></div>
-          <div><img src="./public/img/vscode-logo.png" alt="logo react"></div>
+        <div>
+          <h2 class=" padding-bottom">Mes sevices</h2>
+          <p class="text-center"><strong>Intégration Web</strong></p>
+          <p class=" padding-bottom">Transformation de maquettes en sites interactifs et réactifs de qualité. avec HTML5, CSS3 et javascript</p>
+          <p class="text-center"><strong>Référencement naturel</strong></p>
+          <p class=" padding-bottom">Optimisation SEO pour améliorer la visibilité et le classement des sites web.</p>
+          <p class="text-center"><strong>Développement Front-End</strong></p>
+          <p class=" padding-bottom">Création d’interfaces utilisateur dynamiques et réactives avec les dernières technologies.</p>
+          <p class="text-center"><strong>Développement Back-End</strong></p>
+          <p class=" padding-bottom">Création de serveurs web et d'applications web avec des langages de programmation comme PHP.</p>
+          <p class="text-center"><strong>Gestion de base de donnée</strong></p>
+          <p class=" padding-bottom">Création et gestion de bases de données relationnelles et non relationnelavec des outils comme MySQL.</p>
+        </div>
+        <div>
+          <h2 class="padding-bottom">Les technologies que j'utilise</h2>
+          <div class="competence-grid ">
+            <div> <img src="./public/img/html-5.png" alt="logo html"></div>
+            <div> <img src="./public/img/css-3.png" alt="logo css"></div>
+            <div> <img src="./public/img/logo-sass.png" alt=" logo sass"></div>
+            <div><img src="./public/img/javascript-simple.png" alt="logo javascript"></div>
+            <div><img src="./public/img/php-logo.png" alt="logo php"></div>
+            <div><img src="./public/img/symfony_black_03.png" alt="logo symphony"></div>
+            <div><img src="./public/img/MySQL.png" alt="logo MySQL"></div>
+            <div><img src="./public/img/react.png" alt="logo react"></div>
+            <div><img src="./public/img/vscode-logo.png" alt="logo react"></div>
+          </div>
         </div>
       </section>
       <!-- Projet -->
       <section class="section-projet card-style margin-top35 padding20" id="sectionProjet">
         <h2 class="padding20">Mes projets</h2>
         <div class="swiper mySwiper">
-          <div class="swiper-wrapper template-projet">
+          <div class="swiper-wrapper template-projet margin-bottom">
             <!--            <div class="swiper-slide">
             <div class="projet flex space-between">
               <div class="image-card">
@@ -101,7 +129,7 @@
         <div class="swiper-pagination"></div>
       </section>
       <!-- Contact -->
-      <div class="section-contact card-style margin-top35 card-style padding20 margin-bottom20px" id="sectionContact">
+      <div class="section-contact card-style margin-top35 card-style padding20" id="sectionContact">
         <h2 class="">Me contacter</h2>
         <form action="#" method="POST" id="monform">
           <div class="group">
@@ -136,8 +164,8 @@
       </div>
 
     </main>
-    <footer class="" id="sectionFooter">
-      <p>Copyright 2024. Portfolio MatCode <span>Mention légale</span></p>
+    <footer class=" margin-top35" id="sectionFooter">
+      <p>Copyright 2024. Portfolio MatCode tous droits réservés.</p>
     </footer>
     <script type="module" src="./public/js/script.js" defer></script>
   </div>

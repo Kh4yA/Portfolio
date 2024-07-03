@@ -216,6 +216,10 @@ p {
   padding: 20px 0;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .card-style {
   border-radius: 30px;
   background-color: white;
@@ -225,6 +229,7 @@ p {
   -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 0 20px;
 }
 
 .lien-projet {
@@ -250,18 +255,31 @@ header h2 img {
 }
 @media screen and (max-width: 900px) {
   header {
+    align-items: center;
     position: fixed;
     padding: 0 20px;
-    height: 10vh;
+    height: 12vh;
     align-items: center;
+    background-color: rgba(255, 255, 255, 0.017);
+    backdrop-filter: blur(10%);
   }
 }
 
 .parallax {
-  background-image: linear-gradient(0, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url("../../public/img/walling-g9bohm9h29Q-unsplash.jpg");
+  background-image: linear-gradient(0, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url("../../public/img/caspar-camille-rubin-Hv5vQ8AkbAs-unsplash.jpg");
   background-repeat: no-repeat;
   background-position-x: center;
+  background-position-y: top;
   background-size: 100%;
+}
+
+.parallax-mobile {
+  background-image: linear-gradient(0, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7)), url("../../public/img/caspar-camille-rubin-Hv5vQ8AkbAs-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: top;
+  background-size: 100%;
+  background-attachment: fixed;
 }
 
 .legend {
@@ -416,11 +434,11 @@ header h2 img {
   text-align: center;
 }
 .competence .competence-grid {
-  padding-top: 50px;
+  padding: 50px 0;
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 100px;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 40px;
 }
 @media all and (max-width: 569px) {
   .competence .competence-grid {

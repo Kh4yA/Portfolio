@@ -93,6 +93,9 @@ p {
 .padding20{
   padding: 20px 0;
 }
+.text-center{
+  text-align: center;
+}
 .card-style {
   border-radius: 30px;
   background-color: white;
@@ -102,6 +105,7 @@ p {
   -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 0 20px;
 }
 .lien-projet{
   text-decoration: underline;

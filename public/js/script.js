@@ -15,7 +15,6 @@ let btnContact = document.getElementById('btnContact')
 let scrollDown = document.querySelector('.scroll')
 let inputs = document.querySelectorAll('input')
 let textarea = document.querySelector('textarea')
-let photoMoi = document.querySelector('.img-moi')
 let templateProjet = document.querySelector('.template-projet')
 /**
  * animation, des inputs 
@@ -104,21 +103,18 @@ let animatIntersect = function (entries, observer) {
       modifBtnRemove(btnProjet, projet, "bg-color", "btn-oval", "3")
       modifBtnRemove(btnContact, contact, "bg-color", "btn-oval", "4")
       scrollDown.classList.remove('d-none')
-      photoMoi.classList.remove('reduit')
     } else if (entry.target.id === 'sectionCompetence' && entry.isIntersecting) {
       modifBtnRemove(btnAcceuil, acceuil, "bg-color", "btn-oval", "1")
       modifBtnActive(btnCompetence, competence, "bg-color", "btn-oval", "Technologies")
       modifBtnRemove(btnProjet, projet, "bg-color", "btn-oval", "3")
       modifBtnRemove(btnContact, contact, "bg-color", "btn-oval", "4")
       scrollDown.classList.remove('d-none')
-      photoMoi.classList.add('reduit')
     } else if (entry.target.id === 'sectionProjet' && entry.isIntersecting) {
       modifBtnRemove(btnAcceuil, acceuil, "bg-color", "btn-oval", "1")
       modifBtnRemove(btnCompetence, competence, "bg-color", "btn-oval", "2")
       modifBtnRemove(btnContact, contact, "bg-color", "btn-oval", "4")
       modifBtnActive(btnProjet, projet, 'bg-color', 'btn-oval', 'Projets')
       scrollDown.classList.remove('d-none')
-      photoMoi.classList.add('reduit')
     } else if (entry.target.id === 'sectionContact' && entry.isIntersecting) {
       console.log(entry.target);
       modifBtnRemove(btnAcceuil, acceuil, "bg-color", "btn-oval", "1")
@@ -126,7 +122,6 @@ let animatIntersect = function (entries, observer) {
       modifBtnRemove(btnProjet, projet, "bg-color", "btn-oval", "3")
       modifBtnActive(btnContact, contact, 'bg-color', 'btn-oval', 'Contact')
       scrollDown.classList.remove('d-none')
-      photoMoi.classList.add('reduit')
     } else if (entry.target.id === 'sectionFooter' && entry.isIntersecting) {
       scrollDown.classList.add('d-none')
     }
@@ -165,7 +160,7 @@ const buildTemplateProjet = (datas) => {
           <img src="./public/img/${data.techno.image3}" alt="" >
           <img src="./public/img/${data.techno.image4}" alt="" >
         </div>
-        <p class="margin-bottom20px">${data.description}<br></p>
+        <p class="margin-botton20px">${data.description}<br></p>
       </div>
     </div>
 </div>
@@ -173,8 +168,16 @@ const buildTemplateProjet = (datas) => {
   })
 }
 // PARALLAX
-window.addEventListener("scroll", ()=>{
-  const parallax = document.querySelector(".parallax");
-    // je veux que la position de parallax par defaut soit centrer au debut du parallax
-    parallax.style.backgroundPositionY =  window.scrollY / 2  + "px"
+window.addEventListener("scroll", () => {
+  const parallax = document.getElementById("parallax");
+  // je veux que la position de parallax par defaut soit centrer au debut du parallax
+  // si l'ecran est superieur a 600px alors on jour le paralax sinon non
+  if (window.innerWidth > 900) { 
+       parallax.style.backgroundPositionY = window.scrollY / 1.07 + "px"
+  }
+  else {
+    const body = document.querySelector("body");
+    parallax.classList.remove("parallax")
+    body.classList.add("parallax-mobile")
+  }
 })
