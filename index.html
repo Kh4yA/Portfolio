@@ -11,22 +11,6 @@
 </head>
 
 <body>
-  <!-- Header -->
-  <header class="header flex item-center space-between">
-    <div class="logo">
-      <h2><img src="./public/img/logo-blanc-transparent.png" alt=""></h2>
-    </div>
-    <div id="open-burger"><span class="burger"></span></div>
-  </header>
-  <!-- Hero -->
-  <section class="hero" id="sectionAccueil">
-    <div class="nom">
-      <h2>BIENVENUE.</h2>
-      <p>Je m'appelle Mathieu DASZCZYNSKI, En tant que développeur web fullstack, je suis passionné par la création d'applications web innovantes. Ma formation récente m'a permis d'acquérir des compétences solides en développement front-end et back-end, notamment en HTML, CSS, JavaScript, Node.js et PHP.</p>
-    </div>
-    <div class="img-moi"><img src="./public/img/moi-transparent2.png" alt=""></div>
-  </section>
-  <!-- legend -->
   <div class="legend flex space-between">
     <div class="sommary btn-oval flex">
       <ul>
@@ -45,33 +29,53 @@
       <div class="contact flex direction-column">
         <a href="mailto:mathieu.daszczynski@yahoo.com"><img src="./public/img/mail-white.png" alt="logo mail"></a>
         <a href="tel:+330640493022"><img src="./public/img/tel-white.png" alt="logo tel"></a>
-        <a href="https://github.com/Kh4yA"  target="_blank"><img src="./public/img/github-white.png" alt="logo git"></a>
-        <a href="https://www.linkedin.com/in/mathieu-daszczynski-4b9623194/" target="_blank"><img src="./public/img/linkedin-logo-linkedin-icon-transparent-free-png.webp" alt=""></a>
+        <a href="https://github.com/Kh4yA" target="_blank"><img src="./public/img/github-white.png" alt="logo git"></a>
+        <a href="https://www.linkedin.com/in/mathieu-daszczynski-4b9623194/" target="_blank"><img
+            src="./public/img/linkedin-logo-linkedin-icon-transparent-free-png.webp" alt=""></a>
       </div>
     </div>
   </div>
-
-  <main class="container">
-    <section class="competence flex justify-center card-style padding20" id="sectionCompetence">
-      <h2 class="padding-bottom">Les technologies que j'utilise</h2>
-      <div class="competence-grid ">
-        <div> <img src="./public/img/html-5.png" alt="logo html"></div>
-        <div> <img src="./public/img/css-3.png" alt="logo css"></div>
-        <div> <img src="./public/img/logo-sass.png" alt=" logo sass"></div>
-        <div><img src="./public/img/javascript-simple.png" alt="logo javascript"></div>
-        <div><img src="./public/img/php-logo.png" alt="logo php"></div>
-        <div><img src="./public/img/symfony_black_03.png" alt="logo symphony"></div>
-        <div><img src="./public/img/MySQL.png" alt="logo MySQL"></div>
-        <div><img src="./public/img/react.png" alt="logo react"></div>
-        <div><img src="./public/img/vscode-logo.png" alt="logo react"></div>
+<!-- parallax -->
+  <div class="parallax">
+    <!-- Header -->
+    <header class="header flex item-center space-between">
+      <div class="logo">
+        <h2><img src="./public/img/logo-blanc-transparent.png" alt=""></h2>
+      </div>
+      <div id="open-burger"><span class="burger"></span></div>
+    </header>
+    <!-- Hero -->
+    <section class="hero" id="sectionAccueil">
+      <div class="nom">
+        <h2>BIENVENUE.</h2>
+        <p>Je m'appelle Mathieu DASZCZYNSKI, En tant que développeur web fullstack, je suis passionné par la création
+          d'applications web innovantes. Ma formation récente m'a permis d'acquérir des compétences solides en
+          développement front-end et back-end, notamment en HTML, CSS, JavaScript, Node.js et PHP.</p>
       </div>
     </section>
-    <!-- Projet -->
-    <section class="section-projet card-style margin-top35 padding20" id="sectionProjet">
-      <h2 class="padding20">Mes projets</h2>
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper template-projet">
-          <!--            <div class="swiper-slide">
+    <!-- legend -->
+
+    <main class="container">
+      <section class="competence flex justify-center card-style padding20" id="sectionCompetence">
+        <h2 class="padding-bottom">Les technologies que j'utilise</h2>
+        <div class="competence-grid ">
+          <div> <img src="./public/img/html-5.png" alt="logo html"></div>
+          <div> <img src="./public/img/css-3.png" alt="logo css"></div>
+          <div> <img src="./public/img/logo-sass.png" alt=" logo sass"></div>
+          <div><img src="./public/img/javascript-simple.png" alt="logo javascript"></div>
+          <div><img src="./public/img/php-logo.png" alt="logo php"></div>
+          <div><img src="./public/img/symfony_black_03.png" alt="logo symphony"></div>
+          <div><img src="./public/img/MySQL.png" alt="logo MySQL"></div>
+          <div><img src="./public/img/react.png" alt="logo react"></div>
+          <div><img src="./public/img/vscode-logo.png" alt="logo react"></div>
+        </div>
+      </section>
+      <!-- Projet -->
+      <section class="section-projet card-style margin-top35 padding20" id="sectionProjet">
+        <h2 class="padding20">Mes projets</h2>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper template-projet">
+            <!--            <div class="swiper-slide">
             <div class="projet flex space-between">
               <div class="image-card">
                 <div class=""><img src="public/img/ms-sport.png" alt="site de ms-sportwears"></div>
@@ -92,50 +96,51 @@
               </div>
             </div> 
  -->
+          </div>
         </div>
+        <div class="swiper-pagination"></div>
+      </section>
+      <!-- Contact -->
+      <div class="section-contact card-style margin-top35 card-style padding20 margin-bottom20px" id="sectionContact">
+        <h2 class="">Me contacter</h2>
+        <form action="#" method="POST" id="monform">
+          <div class="group">
+            <label for="nom">Nom </label>
+            <input type="text" name="nom" id="nom">
+          </div>
+          <div class="group">
+            <label for="prenom">Prénom </label>
+            <input type="text" name="prenom" id="prenom">
+          </div>
+          <div class="group">
+            <label for="autre">Sujet </label>
+            <input type="text" name="autre" id="autre">
+          </div>
+          <div class="group">
+            <label for="entreprise">Entreprise </label>
+            <input type="text" name="entreprise" id="entreprise">
+          </div>
+          <div class="group">
+            <label for="email">Email </label>
+            <input type="email" name="email" id="email">
+          </div>
+          <div class="group">
+            <label for="message">Votre message</label>
+            <textarea name="" id="" cols="20" rows="5"></textarea>
+          </div>
+          <div>
+            <p class="padding20">FORMULAIRE BIENTOT DISPONNIBLE</p>
+            <input type="submit" value="Soumettre votre message" class="btn">
+          </div>
+        </form>
       </div>
-      <div class="swiper-pagination"></div>
-à    </section>
-    <!-- Contact -->
-    <div class="section-contact card-style margin-top35 card-style padding20" id="sectionContact">
-      <h2 class="">Me contacter</h2>
-      <form action="#" method="POST" id="monform">
-        <div class="group">
-          <label for="nom">Nom </label>
-          <input type="text" name="nom" id="nom">
-        </div>
-        <div class="group">
-          <label for="prenom">Prénom </label>
-          <input type="text" name="prenom" id="prenom">
-        </div>
-        <div class="group">
-          <label for="autre">Sujet </label>
-          <input type="text" name="autre" id="autre">
-        </div>
-        <div class="group">
-          <label for="entreprise">Entreprise </label>
-          <input type="text" name="entreprise" id="entreprise">
-        </div>
-        <div class="group">
-          <label for="email">Email </label>
-          <input type="email" name="email" id="email">
-        </div>
-        <div class="group">
-          <label for="message">Votre message</label>
-          <textarea name="" id="" cols="20" rows="5"></textarea>
-        </div>
-        <div>
-          <p class="padding20">FORMULAIRE BIENTOT DISPONNIBLE</p>
-          <input type="submit" value="Soumettre votre message" class="btn">
-        </div>
-      </form>
-    </div>
 
-  </main>
-  <footer class="margin-top35" id="sectionFooter">
-    <p>Copyright 2024. Portfolio MatCode <span>Mention légale</span></p>
-  </footer>
-  <script type="module" src="./public/js/script.js" defer></script>
+    </main>
+    <footer class="" id="sectionFooter">
+      <p>Copyright 2024. Portfolio MatCode <span>Mention légale</span></p>
+    </footer>
+    <script type="module" src="./public/js/script.js" defer></script>
+  </div>
 </body>
 
 </html>

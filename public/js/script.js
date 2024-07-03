@@ -1,5 +1,5 @@
 import Swiper from "../../node_modules/swiper/swiper-bundle.mjs"
-
+//import de mes
 let openBurger = document.getElementById('open-burger')
 let burger = document.querySelector('.burger')
 let sommary = document.querySelector('.sommary')
@@ -17,6 +17,9 @@ let inputs = document.querySelectorAll('input')
 let textarea = document.querySelector('textarea')
 let photoMoi = document.querySelector('.img-moi')
 let templateProjet = document.querySelector('.template-projet')
+/**
+ * animation, des inputs 
+ */
 for (let i = 0; i < inputs.length; i++) {
   let input = inputs[i]
   input.addEventListener('input', (e) => {
@@ -60,21 +63,22 @@ function modifBtnRemove(name1, name2, class1, class2, text) {
   name1.classList.remove(class1, class2)
   name2.innerText = text
 }
+/**
+ * ANIMATION DU MENU BURGER
+ */
 openBurger.addEventListener('click', () => {
   burger.classList.toggle('open')
   sommary.classList.toggle('active')
 })
-
+/**
+ * WIPER POUR LA CATEGORIR PROJET
+ */
 let swiper = new Swiper(".mySwiper", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
     renderBullet: function (index, className) {
       return '<span class="' + className + '">' + (index + 1) + "</span>";
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
     },
   },
 });
@@ -86,7 +90,11 @@ let options = {
   rootMargin: "0px",
   threshold: ratio,
 };
-
+/**
+ * 
+ * @param {*elementHTML} entries 
+ * @param {*} observer 
+ */
 let animatIntersect = function (entries, observer) {
   entries.forEach((entry, pos) => {
     console.log(entry.intersectionRatio);
@@ -130,7 +138,9 @@ observer.observe(document.getElementById('sectionCompetence'))
 observer.observe(document.getElementById('sectionProjet'))
 observer.observe(document.getElementById('sectionContact'))
 observer.observe(document.getElementById('sectionFooter'))
-
+/**
+ * AJAX
+ */
 fetch("./public/projet.JSON").then(rep => {
   return rep.json()
 }).then(datas => {
@@ -139,10 +149,6 @@ fetch("./public/projet.JSON").then(rep => {
 })
 const buildTemplateProjet = (datas) => {
   datas.forEach(data => {
-    console.log(data.techno.image1);
-    console.log(data.techno.image2);
-    console.log(data.techno.image3);
-    console.log(data.techno.image4);
     templateProjet.innerHTML += `<div class="swiper-slide">
     <div class="projet flex space-between">
       <div class="image-card">
@@ -159,10 +165,16 @@ const buildTemplateProjet = (datas) => {
           <img src="./public/img/${data.techno.image3}" alt="" >
           <img src="./public/img/${data.techno.image4}" alt="" >
         </div>
-        <p>${data.description}<br></p>
+        <p class="margin-bottom20px">${data.description}<br></p>
       </div>
     </div>
 </div>
 `
   })
 }
+// PARALLAX
+window.addEventListener("scroll", ()=>{
+  const parallax = document.querySelector(".parallax");
+    // je veux que la position de parallax par defaut soit centrer au debut du parallax
+    parallax.style.backgroundPositionY =  window.scrollY / 2  + "px"
+})

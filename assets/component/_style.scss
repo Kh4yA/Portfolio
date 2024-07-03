@@ -3,16 +3,16 @@
 .legend {
   z-index: 10;
   position: fixed;
-  right: 0;
+  right: 0%;
   width: 80px;
-  top: 25%;
+  top:25%;
   .mobile {
     display: none;
   }
   .contact {
     position: fixed;
     top: 25%;
-    left: 0;
+    left: 20px;
     a {
       img {
         width: 50px;
@@ -134,26 +134,6 @@
     width: 80%;
   }
 }
-.img-moi {
-  z-index: 1;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  background-repeat: no-repeat;
-  width: 30vw;
-  height: auto;
-  filter: drop-shadow(1px 1px 15px #000000);
-  transition: transform 1s ease;
-  transform-origin: bottom left;
-  img {
-    width: 100%;
-  }
-}
-.img-moi.reduit {
-  transition: transform 1s ease;
-  transform: scale(0.4);
-  transform-origin: bottom left;
-}
 .bg-color {
   background-color: $secondary-color;
   transition: all 0.3s ease-out;
@@ -193,7 +173,11 @@
   justify-content: center;
   align-items: center;
 }
+.swiper-pagination{
+  display: inline-block;
+}
 .swiper-pagination-bullet {
+  display: inline-block;
   width: 20px;
   height: 20px;
   text-align: center;
