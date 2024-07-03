@@ -1,5 +1,6 @@
 .parallax{
-    background-image: linear-gradient(0,rgba(0,0,0,0.6),rgba(0,0,0,0.5)), url("../../public/img/caspar-camille-rubin-Hv5vQ8AkbAs-unsplash.jpg");
+    background-image: linear-gradient(0,rgba(0,0,0,0.6),rgba(0,0,0,0.5)), url("../../public/img/image000000.jpg");
+    background-color: #050407;
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: top;
@@ -7,10 +8,11 @@
     
 }
 .parallax-mobile{
-    background-image: linear-gradient(0,rgba(0,0,0,0.9),rgba(0,0,0,0.7)), url("../../public/img/caspar-camille-rubin-Hv5vQ8AkbAs-unsplash.jpg");
+    background-image: linear-gradient(0,rgba(0,0,0,0.6),rgba(0,0,0,0.5)), url("../../public/img/image000000.jpg");
+    background-color: #050407;
     background-repeat: no-repeat;
     background-position-x: center;
-    background-position-y: top;
+    background-position-y: center;
     background-size: 100%;
     background-attachment: fixed;
     
