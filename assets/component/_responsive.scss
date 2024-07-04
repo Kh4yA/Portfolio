@@ -18,8 +18,8 @@
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(19px);
     -webkit-backdrop-filter: blur(19px);
-    border-radius: 10px 0 0 10px;
     border: 1px solid $secondary-color;
+    border-right: none;
     transform: translateX(200px);
     transition: all 0.4s ease;
   }

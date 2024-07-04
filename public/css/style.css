@@ -112,7 +112,7 @@ h3 {
 @media all and (max-width: 580px) {
   h2,
   h3 {
-    font-size: 1em;
+    font-size: 2.3em;
   }
 }
 
@@ -234,7 +234,7 @@ p {
 
 .lien-projet {
   text-decoration: underline;
-  color: #2272ff;
+  color: #3f1f4e;
   font-weight: 100;
 }
 .lien-projet:hover {
@@ -341,8 +341,8 @@ header h2 img {
   right: 70px;
   height: 50px;
   border-radius: 25px;
-  background-color: #2272ff;
-  border: 1px solid #2272ff;
+  background-color: #3f1f4e;
+  border: 1px solid #3f1f4e;
 }
 .sommary ul .btn-oval a {
   color: white;
@@ -424,7 +424,7 @@ header h2 img {
 }
 
 .bg-color {
-  background-color: #2272ff;
+  background-color: #3f1f4e;
   transition: all 0.3s ease-out;
 }
 
@@ -482,7 +482,7 @@ header h2 img {
 
 .swiper-pagination-bullet-active {
   color: #fff;
-  background: #007aff;
+  background: #3f1f4e;
 }
 
 .section-projet {
@@ -557,12 +557,12 @@ header h2 img {
 #monform .group.animation label {
   top: 0;
   transform: translateY(-100%);
-  color: #2272ff;
+  color: #3f1f4e;
 }
 
 #monform .group:focus-within input,
 #monform .group.animation input {
-  border-bottom-color: #2272ff;
+  border-bottom-color: #3f1f4e;
 }
 
 #monform :nth-child(7) {
@@ -571,15 +571,15 @@ header h2 img {
 }
 
 .btn {
-  color: #2272ff;
+  color: #3f1f4e;
   width: 300px;
   height: 50px;
   border-radius: 25px;
-  border-color: #2272ff;
+  border-color: #3f1f4e;
   background: rgba(0, 0, 0, 0.1254901961);
   font-size: 20px;
   font-weight: 100;
-  background-image: linear-gradient(to right, transparent 50%, white, #2272ff 50%);
+  background-image: linear-gradient(to right, transparent 50%, white, #3f1f4e 50%);
   background-size: 200%;
   cursor: pointer;
   transition: all 0.5s ease;
@@ -606,11 +606,11 @@ footer {
   height: 5vh;
   padding: 10px;
   background-color: #000;
-  border-top: 1px solid #2272ff;
+  border-top: 1px solid #3f1f4e;
   color: #fff;
 }
 footer span {
-  color: #2272ff;
+  color: #3f1f4e;
 }
 @media all and (max-width: 579px) {
   footer p {
@@ -637,8 +637,8 @@ footer span {
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(19px);
     -webkit-backdrop-filter: blur(19px);
-    border-radius: 10px 0 0 10px;
-    border: 1px solid #2272ff;
+    border: 1px solid #3f1f4e;
+    border-right: none;
     transform: translateX(200px);
     transition: all 0.4s ease;
   }
@@ -652,7 +652,7 @@ footer span {
     display: inline-block;
     width: 30px;
     height: 3px;
-    background-color: #2272ff;
+    background-color: #3f1f4e;
     border-radius: 5px;
     transition: all 0.5s ease;
   }

@@ -16,6 +16,21 @@ let scrollDown = document.querySelector('.scroll')
 let inputs = document.querySelectorAll('input')
 let textarea = document.querySelector('textarea')
 let templateProjet = document.querySelector('.template-projet')
+// PARALLAX
+window.addEventListener("scroll", () => {
+  const parallax = document.getElementById("parallax");
+  // je veux que la position de parallax par defaut soit centrer au debut du parallax
+  // si l'ecran est superieur a 600px alors on jour le paralax sinon non
+  if (window.innerWidth > 900) { 
+       parallax.style.backgroundPositionY = window.scrollY / 1.80 + "px"
+  }
+  else {
+    const body = document.querySelector("body");
+    parallax.classList.remove("parallax")
+    body.classList.add("parallax-mobile")
+  }
+})
+
 /**
  * animation, des inputs 
  */
@@ -167,17 +182,3 @@ const buildTemplateProjet = (datas) => {
 `
   })
 }
-// PARALLAX
-window.addEventListener("scroll", () => {
-  const parallax = document.getElementById("parallax");
-  // je veux que la position de parallax par defaut soit centrer au debut du parallax
-  // si l'ecran est superieur a 600px alors on jour le paralax sinon non
-  if (window.innerWidth > 900) { 
-       parallax.style.backgroundPositionY = window.scrollY / 1.80 + "px"
-  }
-  else {
-    const body = document.querySelector("body");
-    parallax.classList.remove("parallax")
-    body.classList.add("parallax-mobile")
-  }
-})
