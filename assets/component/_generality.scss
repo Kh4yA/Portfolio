@@ -78,6 +78,9 @@ p {
 .margin-bottom {
   margin-bottom: 40%;
 }
+.margin-bottom10{
+  margin-bottom: 10%;
+}
 .margin-bottom20px{
   margin-bottom: 20px;
 }
@@ -109,8 +112,8 @@ p {
 }
 .lien-projet{
   text-decoration: underline;
-  color: $secondary-color;
-  font-weight: 100;
+  color: white;
+  font-weight: 300;
   &:hover{
     transform: scale(1.2);
   }

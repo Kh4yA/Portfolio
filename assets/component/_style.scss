@@ -111,10 +111,9 @@
     }
   }
 }
-.hero{
-}
 .nom {
-  margin-left: 40%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 10%;
   width: 40%;
   height: 100vh;
@@ -149,15 +148,15 @@
   .competence-grid {
     padding: 50px 0;
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     column-gap: 40px;
     @media all and (max-width: 569px) {
       column-gap: 20px;
     }
   }
   img {
-    width: 100px;
+    width: 70px;
   }
 }
 //swiper
