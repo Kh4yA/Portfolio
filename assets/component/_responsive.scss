@@ -2,9 +2,8 @@
 @media all and (max-width: 900px) {
   //hero
   .nom {
-    margin: 35vh 20% 0 auto;
     p{
-      font-size: 18px;
+      font-size: 16px;
     }
   }
   .sommary {
@@ -29,6 +28,7 @@
     transform: translateX(0);
   }
   .burger {
+    
     position: relative;
     display: inline-block;
     width: 30px;
