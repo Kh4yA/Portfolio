@@ -24,7 +24,7 @@ window.addEventListener("scroll", () => {
   if (window.innerWidth > 900) { 
        parallax.style.backgroundPositionY = window.scrollY / 1.80 + "px"
   }
-  else {
+  else if (window.innerWidth < 899){
     const body = document.querySelector("body");
     parallax.classList.remove("parallax")
     body.classList.add("parallax-mobile")
@@ -167,13 +167,13 @@ const buildTemplateProjet = (datas) => {
       <div class="content-card">
         <h3 class="padding-bottom">${data.nom}</h3>
         <p class="padding-bottom">${data.date}</p>
-        <p class="padding-bottom"><a href="${data.lien}" target="_blank"><span class="lien-projet">Lien vers le projet ICIs</span></a></p>
+        <p class="padding-bottom"><a href="${data.lien}" target="_blank"><span class="lien-projet">Lien vers le projet ICI</span></a></p>
         <div class="padding-bottom">
           <P class="bold padding-bottom">Les technologies utilisées</P>
-          <img src="./public/img/${data.techno.image1}" alt="" >
-          <img src="./public/img/${data.techno.image2}" alt="" >
-          <img src="./public/img/${data.techno.image3}" alt="" >
-          <img src="./public/img/${data.techno.image4}" alt="" >
+          <img src="./public/img/${data.techno.image1}" alt="logo des techno utilsé" >
+          <img src="./public/img/${data.techno.image2}" alt="logo des techno utilsé" >
+          <img src="./public/img/${data.techno.image3}" alt="logo des techno utilsé" >
+          <img src="./public/img/${data.techno.image4}" alt="logo des techno utilsé" >
         </div>
         <p class="margin-botton20px">${data.description}<br></p>
       </div>
