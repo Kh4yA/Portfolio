@@ -22,12 +22,12 @@ window.addEventListener("scroll", () => {
   // je veux que la position de parallax par defaut soit centrer au debut du parallax
   // si l'ecran est superieur a 600px alors on jour le paralax sinon non
   if (window.innerWidth > 900) { 
-       parallax.style.backgroundPositionY = window.scrollY / 1.80 + "px"
+       parallax.style.backgroundPositionY = window.scrollY / 1.3 + "px"
   }
-  else if (window.innerWidth < 899){
+  else if (window.innerWidth < 900){
     const body = document.querySelector("body");
     parallax.classList.remove("parallax")
-    body.classList.add("parallax-mobile")
+    body.classList.add("background-mobile")
   }
 })
 

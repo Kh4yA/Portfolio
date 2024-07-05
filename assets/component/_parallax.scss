@@ -1,20 +1,19 @@
-.parallax{
-    background-image: linear-gradient(0,rgba(0,0,0,0.6),rgba(0,0,0,0.5)), url("../../public/img/image000000.jpg");
-    background-color: #050407;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: top;
-    background-size: 100%;
-    
+.parallax {
+  background-image: linear-gradient(0, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+    url("../../public/img/image000000.jpg");
+  background-color: #050407;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: top;
+  background-size: 100%;
 }
-.parallax-mobile{
-    background-image: linear-gradient(0,rgba(0,0,0,0.6),rgba(0,0,0,0.5)), url("../../public/img/image000000.jpg");
-    background-color: #050407;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: center;
-    background-attachment: fixed;
-    background-size: 100%;
-    top: 0;
-    height: 100vh;
+.background-mobile {
+  background-image: linear-gradient(0, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
+    url("../../public/img/image000000.jpg");
+  background-color: #050407;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: contain;
+  height: 100vh;
 }
