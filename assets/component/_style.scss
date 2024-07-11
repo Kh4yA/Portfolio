@@ -116,9 +116,6 @@
 }
 .description {
   padding: 10% 0;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
   height: 100vh;
   p {
     font-size: 25px;
@@ -134,7 +131,7 @@
     }
     h2{
       text-align: center;
-      padding-top: 4vh;
+      padding-top: 9vh;
 
     }
   }
@@ -146,6 +143,7 @@
       }
     p{
       padding: 39vh 0;
+      width: 75vw;
       font-size: 18px;
     }
   }

@@ -473,6 +473,10 @@ p {
   margin-right: auto;
 }
 
+.margin-auto {
+  margin: 0 auto;
+}
+
 .margin-bottom {
   margin-bottom: 40%;
 }
@@ -544,8 +548,9 @@ p {
 
 /*Header*/
 header {
+  background-color: #000000;
   z-index: 1000;
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
   height: 7vh;
@@ -555,14 +560,16 @@ header h2 img {
   width: 80px;
 }
 @media screen and (max-width: 900px) {
+  header h2 img {
+    width: 60px;
+  }
+}
+@media screen and (max-width: 900px) {
   header {
-    align-items: center;
     position: fixed;
     padding: 0 20px;
-    height: 12vh;
-    align-items: center;
+    height: 7vh;
     background-color: rgba(255, 255, 255, 0.017);
-    backdrop-filter: blur(10%);
   }
 }
 
@@ -575,13 +582,12 @@ header h2 img {
   background-size: 100%;
 }
 
-.background-mobile {
+body {
   background-image: linear-gradient(0, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url("../../public/img/image000000.jpg");
-  background-color: #050407;
+  background-attachment: fixed;
+  background-size: center; /* Ajuste l'image pour qu'elle couvre tout l'écran */
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
-  background-size: contain;
   height: 100vh;
 }
 
@@ -703,9 +709,6 @@ header h2 img {
 
 .description {
   padding: 10% 0;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
   height: 100vh;
 }
 .description p {
@@ -724,7 +727,7 @@ header h2 img {
   }
   .description h2 {
     text-align: center;
-    padding-top: 4vh;
+    padding-top: 9vh;
   }
 }
 @media all and (max-width: 900px) {
@@ -737,6 +740,7 @@ header h2 img {
   }
   .description p {
     padding: 39vh 0;
+    width: 75vw;
     font-size: 18px;
   }
 }
@@ -937,7 +941,8 @@ footer .line-footer {
     position: relative;
     display: inline-block;
     width: 30px;
-    height: 3px;
+    height: 2px;
+    top: -10px;
     background-color: #007aff;
     border-radius: 5px;
     transition: all 0.5s ease;
