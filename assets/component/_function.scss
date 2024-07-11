@@ -1,3 +1,39 @@
+$gutter: 16px;
+
+@function large($i){
+  @return calc((100% / (12 / $i)) - (((12 / $i) - 1) * $gutter) / (12 / $i)); 
+}
+
+
+@mixin largeur-modifier {
+  @for $i from 1 to 13{
+    &-#{$i}{
+      width : large($i);
+    }
+  }
+}
+
+/*Generation des classes pour la largeur des colonnes selon 
+les resolutions d'ecrans*/
+
+/*Desktop*/
+.large{
+  @include largeur-modifier;
+}
+
+/*Tablets*/
+@media all and (max-width : 700px){
+  .medium{
+  @include largeur-modifier;
+  }
+}
+
+/*Smartphones*/
+@media all and (max-width : 500px){
+  .small{
+    @include largeur-modifier;
+  }
+}
 .large-1 {
     width: calc(8.3333333333% - 14.6666666667px);
   }

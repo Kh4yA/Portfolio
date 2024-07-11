@@ -134,14 +134,14 @@
     }
     h2{
       text-align: center;
-      padding-top: 25vh;
+      padding-top: 4vh;
+
     }
   }
   @media all and (max-width: 900px) {
     padding-top: 15%;
     width: 70%;
     h2 {
-      padding: 5vh 0;
       font-size: 3em;
       }
     p{
@@ -152,6 +152,12 @@
   .nom{
     font-size: 2.5rem;
     color: $secondary-color;
+  }
+  .line-nom{
+    height: 1px;
+    margin:10px 0 ;
+    background: rgb(68,44,103);
+    background: linear-gradient(90deg, rgba(68,44,103,1) 0%, rgba(0,122,255,1) 50%, rgba(68,44,103,1) 100%);
   }
 }
 .bg-color {
@@ -183,8 +189,8 @@
 .line{
   height: 1px;
   margin: 0 auto;
-  background-color: $secondary-color;
-}
+  background: rgb(68,44,103);
+  background: linear-gradient(90deg, rgba(68,44,103,1) 0%, rgba(0,122,255,1) 50%, rgba(68,44,103,1) 100%);}
 //swiper
 .swiper {
   width: 80%;
@@ -222,7 +228,7 @@
 //section Contact
 .section-contact {
   width: 100%;
-  padding: 15px;
+  padding: 10px;
   h2 {
     text-align: center;
   }
@@ -287,14 +293,17 @@ footer {
   height: 5vh;
   padding: 10px;
   background: #00000031;
-  border-top: 1px solid $secondary-color;
   color: #fff;
-  span {
-    color: $secondary-color;
-  }
   p {
     @media all and (max-width: 579px) {
       font-size: 12px;
     }
+  }
+  .line-footer{
+    margin-bottom: 10px;
+    height: 1px;
+    background: rgb(68,44,103);
+    background: linear-gradient(90deg, rgba(68,44,103,1) 0%, rgba(0,122,255,1) 50%, rgba(68,44,103,1) 100%);
+
   }
 }

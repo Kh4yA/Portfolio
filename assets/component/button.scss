@@ -32,7 +32,11 @@
 .btn-choice{
     cursor: pointer;
     font-size: 2rem;
+    transition: all .3s ease;
     @media all and (max-width: 569px) {
       font-size: 18px;
+    }
+    &:hover{
+      transform: scale(1.05);
     }
 }

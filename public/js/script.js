@@ -16,18 +16,15 @@ let inputs = document.querySelectorAll('input')
 let textarea = document.querySelector('textarea')
 let templateProjetFront = document.querySelector('.template-projet-front')
 let templateProjetBack = document.querySelector('.template-projet-back')
+const body = document.querySelector("body");
 // PARALLAX
 window.addEventListener("scroll", () => {
   const parallax = document.getElementById("parallax");
   // je veux que la position de parallax par defaut soit centrer au debut du parallax
   // si l'ecran est superieur a 600px alors on jour le paralax sinon non
   if (window.innerWidth > 900) {
+    body.classList.remove("background-mobile")
     parallax.style.backgroundPositionY = window.scrollY / 1.3 + "px"
-  }
-  else if (window.innerWidth < 900) {
-    const body = document.querySelector("body");
-    parallax.classList.remove("parallax")
-    body.classList.add("background-mobile")
   }
 })
 
@@ -88,33 +85,22 @@ openBurger.addEventListener('click', () => {
  * SWIPER POUR LA CATEGORIR PROJET
  */
 
-let swiper1 = new Swiper(".mySwiper1", {
-  pagination: {
-    el: ".swiper-pagination",
-    type: "progressbar",
-    clickable: true,
-  },
-        navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
+function createSwiper(selector) {
+  return new Swiper(selector, {
+    pagination: {
+      el: ".swiper-pagination",
+      type: "progressbar",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+}
 
-});
-
-let swiper2 = new Swiper(".mySwiper2", {
-  pagination: {
-    el: ".swiper-pagination",
-    type: "progressbar",
-    clickable: true,
-  },
-        navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-
-});
-
-
+let swiper1 = createSwiper(".mySwiper1");
+let swiper2 = createSwiper(".mySwiper2");
 /**
  * AJAX
  */
@@ -162,7 +148,7 @@ const buildTemplateProjetBack = (datas) => {
           <div class="content-card">
             <h3 class="padding-bottom">${data.nom}</h3>
             <p class="padding-bottom">${data.date}</p>
-            <p class="padding-bottom"><a href="${data.lien}" target="_blank"><span class="lien-projet">Lien vers le code source ICI</span></a></p>
+            <p class="padding-bottom"><a href="${data.lien}" target="_blank"><span class="lien-projet">Lien vers le code source sur git ICI</span></a></p>
             <div class="logo-techno">
               <P class="">Les technologies utilisées</P>
               <img class="width24px" src="./public/img/${data.techno.image1}" alt="logo des techno utilsé" >
@@ -195,7 +181,8 @@ btnChoiceBack.addEventListener("click", (e)=>{
   cardSwiper2.classList.add("d-none")
 
 })
-//Animation
+
+//ANIMATION INTERSECTION OBSERVER
 const ratio = .2
 let options = {
   root: null,
@@ -207,15 +194,9 @@ let options = {
  * @param {*elementHTML} entries 
  * @param {*} observer 
  */
-let animatIntersect = function (entries, observer) {
+let handleIntersect = function (entries, observer) {
   entries.forEach((entry, pos) => {
     console.log(entry.intersectionRatio);
-    if(entry.intersectionRatio > ratio){
-      console.log("l'element est visible");
-      entry.target.classList.add("anime-visible-x")
-    }else{
-      console.log("l'element n'est pas visible");
-    }
     if (entry.target.id === "sectionAccueil" && entry.isIntersecting && entry.intersectionRatio) {
       modifBtnActive(btnAcceuil, acceuil, "bg-color", "btn-oval", "Accueil")
       modifBtnRemove(btnCompetence, competence, "bg-color", "btn-oval", "2")
@@ -246,9 +227,24 @@ let animatIntersect = function (entries, observer) {
     }
   })
 }
-let observer = new IntersectionObserver(animatIntersect, options);
+let animeIntersect = function (entries, observer) {
+  entries.forEach((entry, pos) => {
+    console.log(entry.intersectionRatio);
+    if(entry.intersectionRatio > ratio){
+      entry.target.classList.add('anime-visible')
+    }
+  })
+}
 
-observer.observe(document.querySelectorAll(".anime").forEach((elt)=> {
-  console.log(elt);
-  observer.observe(elt);
-}))
+let observer = new IntersectionObserver(handleIntersect, options);
+observer.observe(document.getElementById('sectionAccueil'))
+observer.observe(document.getElementById('sectionCompetence'))
+observer.observe(document.getElementById('sectionProjet'))
+observer.observe(document.getElementById('sectionContact'))
+observer.observe(document.getElementById('sectionFooter'))
+let observer2 = new IntersectionObserver(animeIntersect, options);
+document.querySelectorAll(".anime").forEach(a=>{
+  console.log(a);
+  observer2.observe(a)
+})
+

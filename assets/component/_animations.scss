@@ -1,8 +1,8 @@
 .anime{
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-30px);
 }
-.anime-visible-x{
+.anime-visible{
     opacity: 1;
     transform: translateX(0);
     transition: all .3s ease-in-out;
