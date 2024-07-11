@@ -1,0 +1,114 @@
+.large-1 {
+    width: calc(8.3333333333% - 14.6666666667px);
+  }
+  .large-2 {
+    width: calc(16.6666666667% - 13.3333333333px);
+  }
+  .large-3 {
+    width: calc(25% - 12px);
+  }
+  .large-4 {
+    width: calc(33.3333333333% - 10.6666666667px);
+  }
+  .large-5 {
+    width: calc(41.6666666667% - 9.3333333333px);
+  }
+  .large-6 {
+    width: calc(50% - 8px);
+  }
+  .large-7 {
+    width: calc(58.3333333333% - 6.6666666667px);
+  }
+  .large-8 {
+    width: calc(66.6666666667% - 5.3333333333px);
+  }
+  .large-9 {
+    width: calc(75% - 4px);
+  }
+  .large-10 {
+    width: calc(83.3333333333% - 2.6666666667px);
+  }
+  .large-11 {
+    width: calc(91.6666666667% - 1.3333333333px);
+  }
+  .large-12 {
+    width: calc(100% - 0px);
+  }
+  
+  @media all and (max-width: 700px) {
+    .medium-1 {
+      width: calc(8.3333333333% - 14.6666666667px);
+    }
+    .medium-2 {
+      width: calc(16.6666666667% - 13.3333333333px);
+    }
+    .medium-3 {
+      width: calc(25% - 12px);
+    }
+    .medium-4 {
+      width: calc(33.3333333333% - 10.6666666667px);
+    }
+    .medium-5 {
+      width: calc(41.6666666667% - 9.3333333333px);
+    }
+    .medium-6 {
+      width: calc(50% - 8px);
+    }
+    .medium-7 {
+      width: calc(58.3333333333% - 6.6666666667px);
+    }
+    .medium-8 {
+      width: calc(66.6666666667% - 5.3333333333px);
+    }
+    .medium-9 {
+      width: calc(75% - 4px);
+    }
+    .medium-10 {
+      width: calc(83.3333333333% - 2.6666666667px);
+    }
+    .medium-11 {
+      width: calc(91.6666666667% - 1.3333333333px);
+    }
+      .medium-12 {
+        width: calc(100% - 0px);
+      }
+  }
+  @media all and (max-width: 400px) {
+    .small-1 {
+      width: calc(8.3333333333% - 14.6666666667px);
+    }
+    .small-2 {
+      width: calc(16.6666666667% - 13.3333333333px);
+    }
+    .small-3 {
+      width: calc(25% - 12px);
+    }
+    .small-4 {
+      width: calc(33.3333333333% - 10.6666666667px);
+    }
+    .small-5 {
+      width: calc(41.6666666667% - 9.3333333333px);
+    }
+    .small-6 {
+      width: calc(50% - 8px);
+    }
+    .small-7 {
+      width: calc(58.3333333333% - 6.6666666667px);
+    }
+    .small-8 {
+      width: calc(66.6666666667% - 5.3333333333px);
+    }
+    .small-9 {
+      width: calc(75% - 4px);
+    }
+    .small-10 {
+      width: calc(83.3333333333% - 2.6666666667px);
+    }
+    .small-11 {
+      width: calc(91.6666666667% - 1.3333333333px);
+    }
+      .small-12 {
+        width: calc(100% - 0px);
+      }
+  }
+  

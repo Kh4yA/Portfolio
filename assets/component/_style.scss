@@ -65,9 +65,12 @@
   }
   .scroll-down {
     position: relative;
-    top: 28vh;
+    top: 29vh;
     left: -30px;
     transform: rotate(90deg);
+    color: $secondary-color;
+    letter-spacing: 1px;
+    font-size: 15px;
   }
   @media all and (max-width: 900px) {
     #contact,
@@ -111,7 +114,7 @@
     }
   }
 }
-.nom {
+.description {
   padding: 10% 0;
   margin-left: auto;
   margin-right: auto;
@@ -142,8 +145,13 @@
       font-size: 3em;
       }
     p{
-      padding: 35vh 0;
+      padding: 39vh 0;
+      font-size: 18px;
     }
+  }
+  .nom{
+    font-size: 2.5rem;
+    color: $secondary-color;
   }
 }
 .bg-color {
@@ -172,10 +180,14 @@
     width: 70px;
   }
 }
+.line{
+  height: 1px;
+  margin: 0 auto;
+  background-color: $secondary-color;
+}
 //swiper
 .swiper {
   width: 80%;
-  height: 100%;
 }
 
 .swiper-slide {
@@ -199,35 +211,14 @@
   opacity: 1;
   background: rgba(255, 255, 255, 0.2);
 }
-
 .swiper-pagination-bullet-active {
   color: #fff;
   background: $secondary-color;
 }
-//Psection projet
-.section-projet {
-  z-index: 0;
-  width: 100%;
-  margin-bottom: 30px;
-  h2 {
-    text-align: center;
-  }
-  .projet {
-    .image-card {
-      width: 100%;
-      img {
-        border-radius: 10px;
-      }
-    }
-    .content-card {
-      width: 100%;
-      img {
-        width: 28px;
-      }
-    }
-  }
+//SECTION PROJET
+.card-swiper1{
+  transition: all .3s ease;
 }
-
 //section Contact
 .section-contact {
   width: 100%;
@@ -289,44 +280,13 @@
   width: 100%;
   text-align: center;
 }
-.btn {
-  color: $secondary-color;
-  width: 300px;
-  height: 50px;
-  border-radius: 25px;
-  border-color: $secondary-color;
-  background: #00000020;
-  font-size: 20px;
-  font-weight: 100;
-  background-image: linear-gradient(
-    to right,
-    transparent 50%,
-    white,
-    $secondary-color 50%
-  );
-  background-size: 200%;
-  cursor: pointer;
-  transition: all 0.5s ease;
-  input {
-    font-weight: 100;
-  }
-  @media all and (max-width: 569px) {
-    width: 200px;
-    font-size: 16px;
-  }
-}
-.btn:hover {
-  color: white;
-  background-position: 100%;
-  font-weight: 100;
-}
 //footer
 footer {
   width: 100%;
   text-align: center;
   height: 5vh;
   padding: 10px;
-  background-color: #000;
+  background: #00000031;
   border-top: 1px solid $secondary-color;
   color: #fff;
   span {

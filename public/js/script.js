@@ -3,7 +3,6 @@ import Swiper from "../../node_modules/swiper/swiper-bundle.mjs"
 let openBurger = document.getElementById('open-burger')
 let burger = document.querySelector('.burger')
 let sommary = document.querySelector('.sommary')
-let btnLegends = document.querySelectorAll('.btn')
 let acceuil = document.getElementById('acceuil')
 let btnAcceuil = document.getElementById('btnAcceuil')
 let competence = document.getElementById('competences')
@@ -15,16 +14,17 @@ let btnContact = document.getElementById('btnContact')
 let scrollDown = document.querySelector('.scroll')
 let inputs = document.querySelectorAll('input')
 let textarea = document.querySelector('textarea')
-let templateProjet = document.querySelector('.template-projet')
+let templateProjetFront = document.querySelector('.template-projet-front')
+let templateProjetBack = document.querySelector('.template-projet-back')
 // PARALLAX
 window.addEventListener("scroll", () => {
   const parallax = document.getElementById("parallax");
   // je veux que la position de parallax par defaut soit centrer au debut du parallax
   // si l'ecran est superieur a 600px alors on jour le paralax sinon non
-  if (window.innerWidth > 900) { 
-       parallax.style.backgroundPositionY = window.scrollY / 1.3 + "px"
+  if (window.innerWidth > 900) {
+    parallax.style.backgroundPositionY = window.scrollY / 1.3 + "px"
   }
-  else if (window.innerWidth < 900){
+  else if (window.innerWidth < 900) {
     const body = document.querySelector("body");
     parallax.classList.remove("parallax")
     body.classList.add("background-mobile")
@@ -85,18 +85,116 @@ openBurger.addEventListener('click', () => {
   sommary.classList.toggle('active')
 })
 /**
- * WIPER POUR LA CATEGORIR PROJET
+ * SWIPER POUR LA CATEGORIR PROJET
  */
-let swiper = new Swiper(".mySwiper", {
+
+let swiper1 = new Swiper(".mySwiper1", {
   pagination: {
     el: ".swiper-pagination",
+    type: "progressbar",
     clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + (index + 1) + "</span>";
-    },
   },
+        navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
 });
 
+let swiper2 = new Swiper(".mySwiper2", {
+  pagination: {
+    el: ".swiper-pagination",
+    type: "progressbar",
+    clickable: true,
+  },
+        navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
+});
+
+
+/**
+ * AJAX
+ */
+fetch("./public/projet.JSON").then(rep => {
+  return rep.json()
+}).then(datas => {
+  console.log(datas.backEnd);
+  buildTemplateProjetFront(datas.frontEnd)
+  buildTemplateProjetBack(datas.backEnd)
+})
+const buildTemplateProjetFront = (datas) => {
+  datas.forEach(data => {
+    templateProjetBack.innerHTML +=
+      `<div class="swiper-slide">
+        <div class="projet flex space-between">
+          <div class="image-card">
+            <div class="large-12"><img src="public/img/${data.photo}" alt="image de ${data.nom}"></div>
+          </div>
+          <div class="content-card">
+            <h3 class="padding-bottom">${data.nom}</h3>
+            <p class="padding-bottom">${data.date}</p>
+            <p class="padding-bottom"><a href="${data.lien}" target="_blank"><span class="lien-projet">Lien vers le projet ICI</span></a></p>
+            <div class="logo-techno">
+              <P class="">Les technologies utilisées</P>
+              <img class="width24px" src="./public/img/${data.techno.image1}" alt="logo des techno utilsé" >
+              <img class="width24px" src="./public/img/${data.techno.image2}" alt="logo des techno utilsé" >
+              <img class="width24px" src="./public/img/${data.techno.image3}" alt="logo des techno utilsé" >
+              <img class="width24px" src="./public/img/${data.techno.image4}" alt="logo des techno utilsé" >
+            </div>
+            <p class="">${data.description}<br></p>
+          </div>
+        </div>
+      </div>
+`
+  })
+}
+const buildTemplateProjetBack = (datas) => {
+  datas.forEach(data => {
+    templateProjetFront.innerHTML +=
+      `<div class="swiper-slide">
+        <div class="projet flex space-between">
+          <div class="image-card">
+            <div class="large-12"><img src="public/img/${data.photo}" alt="image de ${data.nom}"></div>
+          </div>
+          <div class="content-card">
+            <h3 class="padding-bottom">${data.nom}</h3>
+            <p class="padding-bottom">${data.date}</p>
+            <p class="padding-bottom"><a href="${data.lien}" target="_blank"><span class="lien-projet">Lien vers le code source ICI</span></a></p>
+            <div class="logo-techno">
+              <P class="">Les technologies utilisées</P>
+              <img class="width24px" src="./public/img/${data.techno.image1}" alt="logo des techno utilsé" >
+              <img class="width24px" src="./public/img/${data.techno.image2}" alt="logo des techno utilsé" >
+              <img class="width24px" src="./public/img/${data.techno.image3}" alt="logo des techno utilsé" >
+              <img class="width24px" src="./public/img/${data.techno.image4}" alt="logo des techno utilsé" >
+            </div>
+            <p class="">${data.description}<br></p>
+          </div>
+        </div>
+      </div>
+`
+  })
+}
+//MES PROJET
+const cardSwiper1 = document.querySelector(".card-swiper1")
+const cardSwiper2 = document.querySelector(".card-swiper2")
+const btnChoiceFront = document.getElementById("btn-choice-front")
+const btnChoiceBack = document.getElementById("btn-choice-back")
+btnChoiceFront.addEventListener("click", (e)=>{
+    cardSwiper1.classList.add("d-none")
+    btnChoiceFront.classList.add("add-color-secondary")
+    btnChoiceBack.classList.remove("add-color-secondary")
+    cardSwiper2.classList.remove("d-none")
+})
+btnChoiceBack.addEventListener("click", (e)=>{
+  cardSwiper1.classList.remove("d-none")
+  btnChoiceBack.classList.add("add-color-secondary")
+  btnChoiceFront.classList.remove("add-color-secondary")
+  cardSwiper2.classList.add("d-none")
+
+})
 //Animation
 const ratio = .2
 let options = {
@@ -112,6 +210,12 @@ let options = {
 let animatIntersect = function (entries, observer) {
   entries.forEach((entry, pos) => {
     console.log(entry.intersectionRatio);
+    if(entry.intersectionRatio > ratio){
+      console.log("l'element est visible");
+      entry.target.classList.add("anime-visible-x")
+    }else{
+      console.log("l'element n'est pas visible");
+    }
     if (entry.target.id === "sectionAccueil" && entry.isIntersecting && entry.intersectionRatio) {
       modifBtnActive(btnAcceuil, acceuil, "bg-color", "btn-oval", "Accueil")
       modifBtnRemove(btnCompetence, competence, "bg-color", "btn-oval", "2")
@@ -120,7 +224,7 @@ let animatIntersect = function (entries, observer) {
       scrollDown.classList.remove('d-none')
     } else if (entry.target.id === 'sectionCompetence' && entry.isIntersecting) {
       modifBtnRemove(btnAcceuil, acceuil, "bg-color", "btn-oval", "1")
-      modifBtnActive(btnCompetence, competence, "bg-color", "btn-oval", "Technologies")
+      modifBtnActive(btnCompetence, competence, "bg-color", "btn-oval", "Services")
       modifBtnRemove(btnProjet, projet, "bg-color", "btn-oval", "3")
       modifBtnRemove(btnContact, contact, "bg-color", "btn-oval", "4")
       scrollDown.classList.remove('d-none')
@@ -143,42 +247,8 @@ let animatIntersect = function (entries, observer) {
   })
 }
 let observer = new IntersectionObserver(animatIntersect, options);
-observer.observe(document.getElementById('sectionAccueil'))
-observer.observe(document.getElementById('sectionCompetence'))
-observer.observe(document.getElementById('sectionProjet'))
-observer.observe(document.getElementById('sectionContact'))
-observer.observe(document.getElementById('sectionFooter'))
-/**
- * AJAX
- */
-fetch("./public/projet.JSON").then(rep => {
-  return rep.json()
-}).then(datas => {
-  console.log(datas[0].techno.image1);
-  buildTemplateProjet(datas)
-})
-const buildTemplateProjet = (datas) => {
-  datas.forEach(data => {
-    templateProjet.innerHTML += `<div class="swiper-slide">
-    <div class="projet flex space-between">
-      <div class="image-card">
-        <div class=""><img src="public/img/${data.photo}" alt="image de ${data.nom}"></div>
-      </div>
-      <div class="content-card">
-        <h3 class="padding-bottom">${data.nom}</h3>
-        <p class="padding-bottom">${data.date}</p>
-        <p class="padding-bottom"><a href="${data.lien}" target="_blank"><span class="lien-projet">Lien vers le projet ICI</span></a></p>
-        <div class="">
-          <P class="">Les technologies utilisées</P>
-          <img src="./public/img/${data.techno.image1}" alt="logo des techno utilsé" >
-          <img src="./public/img/${data.techno.image2}" alt="logo des techno utilsé" >
-          <img src="./public/img/${data.techno.image3}" alt="logo des techno utilsé" >
-          <img src="./public/img/${data.techno.image4}" alt="logo des techno utilsé" >
-        </div>
-        <p class="">${data.description}<br></p>
-      </div>
-    </div>
-</div>
-`
-  })
-}
+
+observer.observe(document.querySelectorAll(".anime").forEach((elt)=> {
+  console.log(elt);
+  observer.observe(elt);
+}))

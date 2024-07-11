@@ -61,19 +61,9 @@ p {
   display: block;
 }
 .container {
-  max-width: 1440px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
-  @media all and (max-width:1550px){
-    width: 90%;
-  }
-  @media all and (max-width:1000px){
-    width: 80%;
-  }
-  @media all and (max-width:579px){
-    width: 95%;
-  }
 }
 .margin-bottom {
   margin-bottom: 40%;
@@ -87,8 +77,8 @@ p {
 .margin-top35 {
   margin-top: 35%;
 }
-.width-100 {
-  width: 100%;
+.width24px{
+  width: 24px;
 }
 .padding-bottom {
   padding-bottom: 20px;
@@ -96,14 +86,26 @@ p {
 .padding20{
   padding: 20px 0;
 }
+.padding20px{
+  padding: 20px;
+}
+.padding-bottom10px{
+  padding: 10px;
+}
+.padding-bottom5px{
+  padding: 5px;
+}
 .text-center{
   text-align: center;
+}
+.add-color-secondary{
+  color: $secondary-color;
 }
 .card-style {
   border-radius: 30px;
   background-color: white;
   background: rgba(255, 255, 255, 0.03);
-  box-shadow: 0 8px 32px 0 rgba(34, 115, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 123, 255, 0.293);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;

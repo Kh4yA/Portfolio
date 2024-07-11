@@ -1,0 +1,38 @@
+.btn {
+  color: $secondary-color;
+  width: 300px;
+  height: 50px;
+  border-radius: 25px;
+  border-color: $secondary-color;
+  background: #00000020;
+  font-size: 20px;
+  font-weight: 100;
+  background-image: linear-gradient(
+    to right,
+    transparent 50%,
+    white,
+    $secondary-color 50%
+  );
+  background-size: 200%;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  input {
+    font-weight: 100;
+  }
+  @media all and (max-width: 569px) {
+    width: 200px;
+    font-size: 16px;
+  }
+}
+.btn:hover {
+  color: white;
+  background-position: 100%;
+  font-weight: 100;
+}
+.btn-choice{
+    cursor: pointer;
+    font-size: 2rem;
+    @media all and (max-width: 569px) {
+      font-size: 18px;
+    }
+}

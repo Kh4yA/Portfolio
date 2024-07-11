@@ -1,0 +1,9 @@
+.anime{
+    opacity: 0;
+    transform: translateX(-100px);
+}
+.anime-visible-x{
+    opacity: 1;
+    transform: translateX(0);
+    transition: all .3s ease-in-out;
+}
