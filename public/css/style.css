@@ -581,14 +581,10 @@ header h2 img {
   background-position-y: top;
   background-size: 100%;
 }
-
-body {
-  background-image: linear-gradient(0, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url("../../public/img/image000000.jpg");
-  background-attachment: fixed;
-  background-size: center; /* Ajuste l'image pour qu'elle couvre tout l'écran */
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
+@media all and (max-width: 900px) {
+  .parallax {
+    background-attachment: fixed;
+  }
 }
 
 .legend {
@@ -732,15 +728,15 @@ body {
 }
 @media all and (max-width: 900px) {
   .description {
-    padding-top: 15%;
+    padding-top: 5%;
     width: 70%;
   }
   .description h2 {
     font-size: 3em;
   }
   .description p {
-    padding: 39vh 0;
-    width: 75vw;
+    padding: 27vh 0;
+    width: 85vw;
     font-size: 18px;
   }
 }
