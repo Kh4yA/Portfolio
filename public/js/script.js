@@ -3,8 +3,8 @@ import Swiper from "../../node_modules/swiper/swiper-bundle.mjs"
 const openBurger = document.getElementById('open-burger')
 const burger = document.querySelector('.burger')
 const sommary = document.querySelector('.sommary')
-const acceuil = document.getElementById('acceuil')
-const btnAcceuil = document.getElementById('btnAcceuil')
+const accueil = document.getElementById('accueil')
+const btnAccueil = document.getElementById('btnAccueil')
 const competence = document.getElementById('competences')
 const btnCompetence = document.getElementById('btnCompetence')
 const projet = document.getElementById('project')
@@ -25,6 +25,7 @@ darkMode.addEventListener("click", (e) => {
   // DARKMODE
   console.log(e.target.checked);
   if (e.target.checked == true) {
+    console.log("mode dark");
     parallax.classList.add("parallax-dark")
   } else if (e.target.checked == false) {
     parallax.classList.remove("parallax-dark")
@@ -36,7 +37,7 @@ darkMode.addEventListener("click", (e) => {
 window.addEventListener("scroll", () => {
   // je veux que la position de parallax par defaut soit centrer au debut du parallax
   if (window.innerWidth < 900) {
-    parallax.style.backgroundPositionY = window.scrollY / 1 + "px"
+    parallax.style.backgroundPositionY = window.scrollY / 1.5 + "px"
   } else if (window.innerWidth > 900) {
     parallax.style.backgroundPositionY = window.scrollY / 1.5 + "px"
   }
@@ -135,8 +136,8 @@ const buildTemplateProjetFront = (datas) => {
             <h3 class="padding-bottom">${data.nom}</h3>
             <p class="padding-bottom">${data.date}</p>
             <p class="padding-bottom"><a href="${data.lien}" target="_blank"><span class="lien-projet">Lien vers le projet ICI</span></a></p>
-            <div class="logo-techno">
-              <P class="">Les technologies utilisées</P>
+            <div class="logo-techno padding-bottom10px">
+              <P class="padding-bottom">Les technologies utilisées</P>
               <img class="width24px" src="./public/img/${data.techno.image1}" alt="logo des techno utilsé" >
               <img class="width24px" src="./public/img/${data.techno.image2}" alt="logo des techno utilsé" >
               <img class="width24px" src="./public/img/${data.techno.image3}" alt="logo des techno utilsé" >
@@ -161,8 +162,8 @@ const buildTemplateProjetBack = (datas) => {
             <h3 class="padding-bottom">${data.nom}</h3>
             <p class="padding-bottom">${data.date}</p>
             <p class="padding-bottom"><a href="${data.lien}" target="_blank"><span class="lien-projet">Lien vers le code source sur git ICI</span></a></p>
-            <div class="logo-techno">
-              <P class="">Les technologies utilisées</P>
+            <div class="logo-techno padding-bottom10px">
+              <P class="padding-bottom">Les technologies utilisées</P>
               <img class="width24px" src="./public/img/${data.techno.image1}" alt="logo des techno utilsé" >
               <img class="width24px" src="./public/img/${data.techno.image2}" alt="logo des techno utilsé" >
               <img class="width24px" src="./public/img/${data.techno.image3}" alt="logo des techno utilsé" >
@@ -213,26 +214,26 @@ let handleIntersect = function (entries, observer) {
       console.log("on ajoute blur");
     }
     if (entry.target.id === "sectionAccueil" && entry.isIntersecting && entry.intersectionRatio) {
-      modifBtnActive(btnAcceuil, acceuil, "bg-color", "btn-oval", "Accueil")
+      modifBtnActive(btnAccueil, accueil, "bg-color", "btn-oval", "Accueil")
       modifBtnRemove(btnCompetence, competence, "bg-color", "btn-oval", "2")
       modifBtnRemove(btnProjet, projet, "bg-color", "btn-oval", "3")
       modifBtnRemove(btnContact, contact, "bg-color", "btn-oval", "4")
       header.classList.remove('blur')
       scrollDown.classList.remove('d-none')
     } else if (entry.target.id === 'sectionCompetence' && entry.isIntersecting) {
-      modifBtnRemove(btnAcceuil, acceuil, "bg-color", "btn-oval", "1")
+      modifBtnRemove(btnAccueil, accueil, "bg-color", "btn-oval", "1")
       modifBtnActive(btnCompetence, competence, "bg-color", "btn-oval", "Services")
       modifBtnRemove(btnProjet, projet, "bg-color", "btn-oval", "3")
       modifBtnRemove(btnContact, contact, "bg-color", "btn-oval", "4")
       scrollDown.classList.remove('d-none')
     } else if (entry.target.id === 'sectionProjet' && entry.isIntersecting) {
-      modifBtnRemove(btnAcceuil, acceuil, "bg-color", "btn-oval", "1")
+      modifBtnRemove(btnAccueil, accueil, "bg-color", "btn-oval", "1")
       modifBtnRemove(btnCompetence, competence, "bg-color", "btn-oval", "2")
       modifBtnRemove(btnContact, contact, "bg-color", "btn-oval", "4")
       modifBtnActive(btnProjet, projet, 'bg-color', 'btn-oval', 'Projets')
       scrollDown.classList.remove('d-none')
     } else if (entry.target.id === 'sectionContact' && entry.isIntersecting) {
-      modifBtnRemove(btnAcceuil, acceuil, "bg-color", "btn-oval", "1")
+      modifBtnRemove(btnAccueil, accueil, "bg-color", "btn-oval", "1")
       modifBtnRemove(btnCompetence, competence, "bg-color", "btn-oval", "2")
       modifBtnRemove(btnProjet, projet, "bg-color", "btn-oval", "3")
       modifBtnActive(btnContact, contact, 'bg-color', 'btn-oval', 'Contact')

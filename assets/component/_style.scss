@@ -4,6 +4,11 @@ body, p, h1{
   font-weight: 300;
   font-size: 25px;
   letter-spacing: 2px;
+  @media all and (max-width: 571px) {
+    p{
+      font-size: 20px;
+    }
+  }
 }
 .legend {
   z-index: 10;
@@ -81,7 +86,7 @@ body, p, h1{
   @media all and (max-width: 900px) {
     #contact,
     #project,
-    #acceuil,
+    #accueil,
     #competences {
       display: none;
     }
@@ -148,6 +153,7 @@ body, p, h1{
     h2{
       text-align: center;
       padding-top: 8vh;
+      font-size: 3rem;
     }
   }
   @media all and (min-width: 580px) and (max-width: 900px) {

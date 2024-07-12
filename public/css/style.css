@@ -425,7 +425,7 @@ les resolutions d'ecrans*/
 }
 
 .switch .sun .dot {
-  positon: relative;
+  position: relative;
   display: block;
   width: 3px;
   height: 3px;
@@ -630,7 +630,7 @@ p {
 }
 
 .padding-bottom10px {
-  padding: 10px;
+  padding-bottom: 10px;
 }
 
 .padding-bottom5px {
@@ -722,6 +722,11 @@ body, p, h1 {
   font-size: 25px;
   letter-spacing: 2px;
 }
+@media all and (max-width: 571px) {
+  body p, p p, h1 p {
+    font-size: 20px;
+  }
+}
 
 .legend {
   z-index: 10;
@@ -802,7 +807,7 @@ body, p, h1 {
 @media all and (max-width: 900px) {
   .sommary #contact,
   .sommary #project,
-  .sommary #acceuil,
+  .sommary #accueil,
   .sommary #competences {
     display: none;
   }
@@ -870,6 +875,7 @@ body, p, h1 {
   .description h2 {
     text-align: center;
     padding-top: 8vh;
+    font-size: 3rem;
   }
 }
 @media all and (min-width: 580px) and (max-width: 900px) {
