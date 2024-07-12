@@ -579,11 +579,16 @@ header h2 img {
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: top;
-  background-size: 100%;
 }
 @media all and (max-width: 900px) {
-  .parallax {
-    background-attachment: fixed;
+  .parallax .background {
+    background-image: linear-gradient(0, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url("../../public/img/image000000.jpg");
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 
@@ -736,7 +741,6 @@ header h2 img {
   }
   .description p {
     padding: 27vh 0;
-    width: 85vw;
     font-size: 18px;
   }
 }
