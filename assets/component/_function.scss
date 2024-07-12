@@ -22,14 +22,14 @@ les resolutions d'ecrans*/
 }
 
 /*Tablets*/
-@media all and (max-width : 700px){
+@media all and (max-width : 1250px){
   .medium{
   @include largeur-modifier;
   }
 }
 
 /*Smartphones*/
-@media all and (max-width : 500px){
+@media all and (max-width : 900px){
   .small{
     @include largeur-modifier;
   }
@@ -71,7 +71,7 @@ les resolutions d'ecrans*/
     width: calc(100% - 0px);
   }
   
-  @media all and (max-width: 700px) {
+  @media all and (max-width: 11440px) {
     .medium-1 {
       width: calc(8.3333333333% - 14.6666666667px);
     }
@@ -109,7 +109,7 @@ les resolutions d'ecrans*/
         width: calc(100% - 0px);
       }
   }
-  @media all and (max-width: 400px) {
+  @media all and (max-width: 900px) {
     .small-1 {
       width: calc(8.3333333333% - 14.6666666667px);
     }

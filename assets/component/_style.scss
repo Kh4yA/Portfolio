@@ -124,26 +124,34 @@
     font-weight: 100;
     font-size: clamp(3rem, 14.765vw - 6.468rem, 11.25rem);
   }
-  @media all and (max-width: 579px) {
-    padding-left: 30px;
+  @media all and (max-width: 400px) {
     p{
-      padding: 20vh 0;
+      padding-top: 20vh;
+      font-size: 18px;
     }
     h2{
       text-align: center;
-      padding-top: 9vh;
-
+      padding-top: 5vh;
     }
   }
-  @media all and (max-width: 900px) {
-    padding-top: 5%;
-    width: 70%;
-    h2 {
-      font-size: 3em;
-      }
+  @media all and (min-width: 401px) and (max-width: 579px) {
     p{
-      padding: 27vh 0;
+      padding-top: 20vh;
+      font-size: 25px;
+    }
+    h2{
+      text-align: center;
+      padding-top: 8vh;
+    }
+  }
+  @media all and (min-width: 580px) and (max-width: 900px) {
+    p{
+      padding-top: 15vh;
       font-size: 18px;
+    }
+    h2{
+      text-align: center;
+      padding-top: 15vh;
     }
   }
   .nom{
@@ -155,6 +163,12 @@
     margin:10px 0 ;
     background: rgb(68,44,103);
     background: linear-gradient(90deg, rgba(68,44,103,1) 0%, rgba(0,122,255,1) 50%, rgba(68,44,103,1) 100%);
+    
+  }
+  @media all and (min-width: 500px) and (max-width:900px) {
+    .line-nom{
+              margin-bottom: 40%;
+    }
   }
 }
 .bg-color {
@@ -164,9 +178,7 @@
 
 //competence
 .competence {
-  width: 100%;
   h2 {
-    width: 100%;
     text-align: center;
   }
   .competence-grid {
