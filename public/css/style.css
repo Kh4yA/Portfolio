@@ -349,8 +349,8 @@ les resolutions d'ecrans*/
 }
 @media all and (max-width: 569px) {
   .btn {
-    width: 200px;
-    font-size: 16px;
+    width: 220px;
+    font-size: 15px;
   }
 }
 
@@ -372,6 +372,122 @@ les resolutions d'ecrans*/
 }
 .btn-choice:hover {
   transform: scale(1.05);
+}
+
+/* The switch container */
+.switch {
+  --transition: 300ms;
+  --transition500: 500ms;
+  --color-dark: #0c0f14;
+  --color-darkGray: #21262e;
+  --color-gray: #52555a;
+  --color-offwhite: #cecece;
+  --shadow-color: var(--color-dark);
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 60px;
+  height: fit-content;
+  background-color: var(--color-dark);
+  border-radius: 30px;
+  padding: 4px;
+  transition: var(--transition500);
+  user-select: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* Svg styles */
+.switch .svg {
+  transition: var(--transition);
+  position: absolute;
+  left: 5px;
+}
+
+.switch .moon {
+  width: 18px;
+  fill: var(--color-gray);
+  opacity: 1;
+}
+
+.switch .sun {
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  left: calc(100% - 21.5px);
+  top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scale: 0.8;
+  opacity: 0;
+}
+
+.switch .sun .dot {
+  positon: relative;
+  display: block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--color-dark);
+  background: white;
+  z-index: 1;
+  box-shadow: 11px 0px 0px var(--shadow-color), 10.3px 0px 0px var(--shadow-color), -11px 0px 0px var(--shadow-color), -10.3px 0px 0px var(--shadow-color), 0px -11px 0px var(--shadow-color), 0px -10.3px 0px var(--shadow-color), 0px 11px 0px var(--shadow-color), 0px 10.3px 0px var(--shadow-color), 8px 8px 0px var(--shadow-color), 7.3px 7.3px 0px var(--shadow-color), 8px -8px 0px var(--shadow-color), 7.3px -7.3px 0px var(--shadow-color), -8px -8px 0px var(--shadow-color), -7.3px -7.3px 0px var(--shadow-color), -8px 8px 0px var(--shadow-color), -7.3px 7.3px 0px var(--shadow-color);
+}
+
+.switch .sun .dot::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid var(--color-dark);
+}
+
+/*checkbox styles */
+.switch .circle {
+  appearance: none;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  left: 0;
+  background-color: var(--color-darkGray);
+  border: 1px solid var(--color-darkGray);
+  transition: var(--transition500);
+  box-shadow: 1px 1px 20px 3px var(--color-darkGray);
+}
+
+.switch:has(.circle:checked) {
+  background: var(--color-offwhite);
+}
+
+.switch .circle:hover {
+  margin-left: 3px;
+}
+
+.switch .circle:checked:hover {
+  margin-left: -3px;
+}
+
+.switch .circle:checked {
+  left: calc(100% - 24px);
+  background: white;
+  border-color: white;
+  box-shadow: 1px 1px 30px 12px white;
+}
+
+.switch:has(.circle:checked) > .sun {
+  opacity: 1;
+}
+
+.switch:has(.circle:checked) > .moon {
+  opacity: 0;
 }
 
 .anime {
@@ -398,6 +514,10 @@ h1 {
   h1 {
     font-size: 1em;
   }
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 5px black;
 }
 
 h2,
@@ -527,14 +647,14 @@ p {
 
 .card-style {
   border-radius: 30px;
-  background-color: white;
-  background: rgba(255, 255, 255, 0.03);
+  background-color: rgb(0, 0, 0);
+  background: rgba(61, 60, 60, 0.357);
   box-shadow: 7px 7px 25px 0 rgba(0, 123, 255, 0.293);
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(10px);
-  border-radius: 10px;
+  border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  padding: 0 20px;
+  padding: 40px 20px;
 }
 
 .lien-projet {
@@ -548,16 +668,15 @@ p {
 
 /*Header*/
 header {
-  background-color: #000000;
   z-index: 1000;
   position: fixed;
   top: 0;
   width: 100%;
-  height: 7vh;
-  padding: 10px;
+  height: 10vh;
+  padding: 0 1%;
 }
 header h2 img {
-  width: 80px;
+  width: 120px;
 }
 @media screen and (max-width: 900px) {
   header h2 img {
@@ -573,13 +692,35 @@ header h2 img {
   }
 }
 
-.parallax {
-  background-image: linear-gradient(0, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url("../../public/img/image000000.jpg");
+@media screen and (max-width: 900px) {
+  .blur {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s ease-in;
+  }
+}
+.parallax-light {
+  background-image: linear-gradient(0, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../public/img/image000000.jpg");
   background-color: #050407;
   background-repeat: no-repeat;
   background-position-x: center;
-  background-position-y: top;
   background-size: 100vw;
+}
+
+.parallax-dark {
+  background-image: linear-gradient(0, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("../../public/img/image000000.jpg");
+  background-color: #050407;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: 100vw;
+}
+
+body, p, h1 {
+  color: #fff5f5;
+  font-weight: 300;
+  font-size: 25px;
+  letter-spacing: 2px;
 }
 
 .legend {
@@ -595,24 +736,16 @@ header h2 img {
 .legend .contact {
   position: fixed;
   top: 25%;
-  left: 20px;
-}
-.legend .contact a img {
-  width: 50px;
+  left: 2%;
 }
 @media all and (max-width: 900px) {
   .legend .contact {
     position: static;
     width: 100%;
     top: 70%;
-    display: grid;
     grid-template-columns: 40px 40px;
     column-gap: 20px;
     row-gap: 20px;
-  }
-  .legend .contact img {
-    margin-left: 45px;
-    width: 50px;
   }
 }
 
@@ -630,7 +763,6 @@ header h2 img {
   background: rgba(255, 255, 255, 0.2);
 }
 .sommary ul li a {
-  color: black;
   font-weight: 500;
 }
 .sommary ul .btn-oval {
@@ -655,6 +787,17 @@ header h2 img {
   color: #007aff;
   letter-spacing: 1px;
   font-size: 15px;
+}
+.sommary .contact {
+  gap: 20px;
+  color: red;
+  justify-content: center;
+}
+.sommary .contact i {
+  font-size: 40px;
+}
+.sommary .mode-light {
+  color: rgb(0, 0, 0);
 }
 @media all and (max-width: 900px) {
   .sommary #contact,
@@ -711,7 +854,7 @@ header h2 img {
 }
 @media all and (max-width: 400px) {
   .description p {
-    padding-top: 20vh;
+    padding-top: 26vh;
     font-size: 18px;
   }
   .description h2 {
@@ -721,8 +864,8 @@ header h2 img {
 }
 @media all and (min-width: 401px) and (max-width: 579px) {
   .description p {
-    padding-top: 20vh;
-    font-size: 25px;
+    padding-top: 22vh;
+    font-size: 20px;
   }
   .description h2 {
     text-align: center;
@@ -823,6 +966,10 @@ header h2 img {
   transition: all 0.3s ease;
 }
 
+.image-card img {
+  border-radius: 5px;
+}
+
 .section-contact {
   width: 100%;
   padding: 10px;
@@ -890,8 +1037,7 @@ header h2 img {
 footer {
   width: 100%;
   text-align: center;
-  height: 5vh;
-  padding: 10px;
+  padding: 20px;
   background: rgba(0, 0, 0, 0.1921568627);
   color: #fff;
 }

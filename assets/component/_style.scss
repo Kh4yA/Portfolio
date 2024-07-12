@@ -1,5 +1,10 @@
 //nav
-
+body, p, h1{
+  color: #fff5f5;
+  font-weight: 300;
+  font-size: 25px;
+  letter-spacing: 2px;
+}
 .legend {
   z-index: 10;
   position: fixed;
@@ -12,24 +17,15 @@
   .contact {
     position: fixed;
     top: 25%;
-    left: 20px;
-    a {
-      img {
-        width: 50px;
-      }
-    }
+    left: 2%;
     @media all and (max-width: 900px) {
       position: static;
       width: 100%;
       top: 70%;
-      display: grid;
+
       grid-template-columns: 40px 40px;
       column-gap: 20px;
       row-gap: 20px;
-      img{
-        margin-left: 45px;
-        width: 50px;
-      }
     }
   }
 }
@@ -44,7 +40,6 @@
       border-radius: 50px;
       background: rgba(255, 255, 255, 0.2);
       a {
-        color: black;
         font-weight: 500;
       }
     }
@@ -71,6 +66,17 @@
     color: $secondary-color;
     letter-spacing: 1px;
     font-size: 15px;
+  }
+  .contact{
+    gap: 20px;
+    color: red;
+    justify-content: center;
+    i{
+      font-size: 40px;
+    }
+  }
+  .mode-light{
+    color: rgb(0, 0, 0);
   }
   @media all and (max-width: 900px) {
     #contact,
@@ -126,7 +132,7 @@
   }
   @media all and (max-width: 400px) {
     p{
-      padding-top: 20vh;
+      padding-top: 26vh;
       font-size: 18px;
     }
     h2{
@@ -136,8 +142,8 @@
   }
   @media all and (min-width: 401px) and (max-width: 579px) {
     p{
-      padding-top: 20vh;
-      font-size: 25px;
+      padding-top: 22vh;
+      font-size: 20px;
     }
     h2{
       text-align: center;
@@ -234,6 +240,11 @@
 .card-swiper1{
   transition: all .3s ease;
 }
+.image-card{
+  img{
+    border-radius: 5px;
+  }
+}
 //section Contact
 .section-contact {
   width: 100%;
@@ -299,8 +310,7 @@
 footer {
   width: 100%;
   text-align: center;
-  height: 5vh;
-  padding: 10px;
+  padding: 20px;
   background: #00000031;
   color: #fff;
   p {
@@ -313,6 +323,5 @@ footer {
     height: 1px;
     background: rgb(68,44,103);
     background: linear-gradient(90deg, rgba(68,44,103,1) 0%, rgba(0,122,255,1) 50%, rgba(68,44,103,1) 100%);
-
   }
 }

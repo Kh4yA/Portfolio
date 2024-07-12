@@ -9,6 +9,9 @@ h1 {
     font-size: 1em;
   }
 }
+.text-shadow{
+  text-shadow: 1px 1px 5px black;
+}
 h2,
 h3 {
   font-family: "Roboto Condensed", sans-serif;
@@ -106,14 +109,14 @@ p {
 }
 .card-style {
   border-radius: 30px;
-  background-color: white;
-  background: rgba(255, 255, 255, 0.03);
+  background-color: rgb(0, 0, 0);
+  background: rgba(61, 60, 60, 0.357);
   box-shadow: 7px 7px 25px 0 rgba(0, 123, 255, 0.293);
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(10px);
-  border-radius: 10px;
+  border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  padding: 0 20px;
+  padding: 40px 20px;
 }
 .lien-projet{
   text-decoration: underline;

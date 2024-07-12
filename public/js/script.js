@@ -1,29 +1,46 @@
 import Swiper from "../../node_modules/swiper/swiper-bundle.mjs"
 //import de mes
-let openBurger = document.getElementById('open-burger')
-let burger = document.querySelector('.burger')
-let sommary = document.querySelector('.sommary')
-let acceuil = document.getElementById('acceuil')
-let btnAcceuil = document.getElementById('btnAcceuil')
-let competence = document.getElementById('competences')
-let btnCompetence = document.getElementById('btnCompetence')
-let projet = document.getElementById('project')
-let btnProjet = document.getElementById('btnProject')
-let contact = document.getElementById('contact')
-let btnContact = document.getElementById('btnContact')
-let scrollDown = document.querySelector('.scroll')
-let inputs = document.querySelectorAll('input')
-let textarea = document.querySelector('textarea')
-let templateProjetFront = document.querySelector('.template-projet-front')
-let templateProjetBack = document.querySelector('.template-projet-back')
+const openBurger = document.getElementById('open-burger')
+const burger = document.querySelector('.burger')
+const sommary = document.querySelector('.sommary')
+const acceuil = document.getElementById('acceuil')
+const btnAcceuil = document.getElementById('btnAcceuil')
+const competence = document.getElementById('competences')
+const btnCompetence = document.getElementById('btnCompetence')
+const projet = document.getElementById('project')
+const btnProjet = document.getElementById('btnProject')
+const contact = document.getElementById('contact')
+const btnContact = document.getElementById('btnContact')
+const scrollDown = document.querySelector('.scroll')
+const inputs = document.querySelectorAll('input')
+const textarea = document.querySelector('textarea')
+const templateProjetFront = document.querySelector('.template-projet-front')
+const templateProjetBack = document.querySelector('.template-projet-back')
 const body = document.querySelector("body");
+const header = document.getElementById('header')
+const darkMode = document.getElementById('switch')
+const parallax = document.getElementById("parallax");
+console.log(darkMode);
+darkMode.addEventListener("click", (e) => {
+  // DARKMODE
+  console.log(e.target.checked);
+  if (e.target.checked == true) {
+    parallax.classList.add("parallax-dark")
+  } else if (e.target.checked == false) {
+    parallax.classList.remove("parallax-dark")
+  }
+})
+
 // PARALLAX
 // si l'ecran est superieur a 900px alors on jour le paralax sinon non
-const parallax = document.getElementById("parallax");
-  window.addEventListener("scroll", () => {
-    // je veux que la position de parallax par defaut soit centrer au debut du parallax
-      parallax.style.backgroundPositionY = window.scrollY / 1.4 + "px"
-    })
+window.addEventListener("scroll", () => {
+  // je veux que la position de parallax par defaut soit centrer au debut du parallax
+  if (window.innerWidth < 900) {
+    parallax.style.backgroundPositionY = window.scrollY / 1 + "px"
+  } else if (window.innerWidth > 900) {
+    parallax.style.backgroundPositionY = window.scrollY / 1.5 + "px"
+  }
+})
 /**
  * animation, des inputs 
  */
@@ -103,7 +120,6 @@ let swiper2 = createSwiper(".mySwiper2");
 fetch("./public/projet.JSON").then(rep => {
   return rep.json()
 }).then(datas => {
-  console.log(datas.backEnd);
   buildTemplateProjetFront(datas.frontEnd)
   buildTemplateProjetBack(datas.backEnd)
 })
@@ -164,13 +180,13 @@ const cardSwiper1 = document.querySelector(".card-swiper1")
 const cardSwiper2 = document.querySelector(".card-swiper2")
 const btnChoiceFront = document.getElementById("btn-choice-front")
 const btnChoiceBack = document.getElementById("btn-choice-back")
-btnChoiceFront.addEventListener("click", (e)=>{
-    cardSwiper1.classList.add("d-none")
-    btnChoiceFront.classList.add("add-color-secondary")
-    btnChoiceBack.classList.remove("add-color-secondary")
-    cardSwiper2.classList.remove("d-none")
+btnChoiceFront.addEventListener("click", (e) => {
+  cardSwiper1.classList.add("d-none")
+  btnChoiceFront.classList.add("add-color-secondary")
+  btnChoiceBack.classList.remove("add-color-secondary")
+  cardSwiper2.classList.remove("d-none")
 })
-btnChoiceBack.addEventListener("click", (e)=>{
+btnChoiceBack.addEventListener("click", (e) => {
   cardSwiper1.classList.remove("d-none")
   btnChoiceBack.classList.add("add-color-secondary")
   btnChoiceFront.classList.remove("add-color-secondary")
@@ -192,12 +208,16 @@ let options = {
  */
 let handleIntersect = function (entries, observer) {
   entries.forEach((entry, pos) => {
-    console.log(entry.intersectionRatio);
+    if (entry.target.id === 'sectionTechnologie' && entry.isIntersecting) {
+      header.classList.add('blur')
+      console.log("on ajoute blur");
+    }
     if (entry.target.id === "sectionAccueil" && entry.isIntersecting && entry.intersectionRatio) {
       modifBtnActive(btnAcceuil, acceuil, "bg-color", "btn-oval", "Accueil")
       modifBtnRemove(btnCompetence, competence, "bg-color", "btn-oval", "2")
       modifBtnRemove(btnProjet, projet, "bg-color", "btn-oval", "3")
       modifBtnRemove(btnContact, contact, "bg-color", "btn-oval", "4")
+      header.classList.remove('blur')
       scrollDown.classList.remove('d-none')
     } else if (entry.target.id === 'sectionCompetence' && entry.isIntersecting) {
       modifBtnRemove(btnAcceuil, acceuil, "bg-color", "btn-oval", "1")
@@ -212,7 +232,6 @@ let handleIntersect = function (entries, observer) {
       modifBtnActive(btnProjet, projet, 'bg-color', 'btn-oval', 'Projets')
       scrollDown.classList.remove('d-none')
     } else if (entry.target.id === 'sectionContact' && entry.isIntersecting) {
-      console.log(entry.target);
       modifBtnRemove(btnAcceuil, acceuil, "bg-color", "btn-oval", "1")
       modifBtnRemove(btnCompetence, competence, "bg-color", "btn-oval", "2")
       modifBtnRemove(btnProjet, projet, "bg-color", "btn-oval", "3")
@@ -225,8 +244,7 @@ let handleIntersect = function (entries, observer) {
 }
 let animeIntersect = function (entries, observer) {
   entries.forEach((entry, pos) => {
-    console.log(entry.intersectionRatio);
-    if(entry.intersectionRatio > ratio){
+    if (entry.intersectionRatio > ratio) {
       entry.target.classList.add('anime-visible')
     }
   })
@@ -238,9 +256,9 @@ observer.observe(document.getElementById('sectionCompetence'))
 observer.observe(document.getElementById('sectionProjet'))
 observer.observe(document.getElementById('sectionContact'))
 observer.observe(document.getElementById('sectionFooter'))
+observer.observe(document.getElementById('sectionTechnologie'))
 let observer2 = new IntersectionObserver(animeIntersect, options);
-document.querySelectorAll(".anime").forEach(a=>{
-  console.log(a);
+document.querySelectorAll(".anime").forEach(a => {
   observer2.observe(a)
 })
 
