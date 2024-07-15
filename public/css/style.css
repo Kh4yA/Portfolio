@@ -378,8 +378,8 @@ les resolutions d'ecrans*/
 .switch {
   --transition: 300ms;
   --transition500: 500ms;
-  --color-dark: #0c0f14;
-  --color-darkGray: #21262e;
+  --color-dark: #4c4c4c;
+  --color-darkGray: #7f8794;
   --color-gray: #52555a;
   --color-offwhite: #cecece;
   --shadow-color: var(--color-dark);
@@ -647,9 +647,9 @@ p {
 
 .card-style {
   border-radius: 30px;
-  background-color: rgb(0, 0, 0);
-  background: rgba(61, 60, 60, 0.357);
-  box-shadow: 7px 7px 25px 0 rgba(0, 123, 255, 0.293);
+  background-color: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: 0px 8px 32px 0 rgba(0, 123, 255, 0.293);
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 20px;
@@ -746,11 +746,13 @@ body, p, h1 {
 @media all and (max-width: 900px) {
   .legend .contact {
     position: static;
+    display: grid;
     width: 100%;
     top: 70%;
-    grid-template-columns: 40px 40px;
-    column-gap: 20px;
-    row-gap: 20px;
+    grid-template-columns: 60px 60px;
+  }
+  .legend .contact a i {
+    font-size: 30px;
   }
 }
 

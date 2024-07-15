@@ -25,12 +25,15 @@ body, p, h1{
     left: 2%;
     @media all and (max-width: 900px) {
       position: static;
+      display: grid;
       width: 100%;
       top: 70%;
-
-      grid-template-columns: 40px 40px;
-      column-gap: 20px;
-      row-gap: 20px;
+      grid-template-columns: 60px 60px;
+      a{
+        i{
+                  font-size: 30px;
+        }
+      }
     }
   }
 }
