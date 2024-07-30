@@ -20,26 +20,15 @@ const body = document.querySelector("body");
 const header = document.getElementById('header')
 const darkMode = document.getElementById('switch')
 const parallax = document.getElementById("parallax");
-console.log(darkMode);
-darkMode.addEventListener("click", (e) => {
-  // DARKMODE
-  console.log(e.target.checked);
-  if (e.target.checked == true) {
-    console.log("mode dark");
-    parallax.classList.add("parallax-dark")
-  } else if (e.target.checked == false) {
-    parallax.classList.remove("parallax-dark")
-  }
-})
 
 // PARALLAX
 // si l'ecran est superieur a 900px alors on jour le paralax sinon non
 window.addEventListener("scroll", () => {
   // je veux que la position de parallax par defaut soit centrer au debut du parallax
   if (window.innerWidth < 900) {
-    parallax.style.backgroundPositionY = window.scrollY / 1.5 + "px"
+    parallax.style.backgroundPositionY = window.scrollY / 1.4 + "px"
   } else if (window.innerWidth > 900) {
-    parallax.style.backgroundPositionY = window.scrollY / 1.5 + "px"
+    parallax.style.backgroundPositionY = window.scrollY / 1.3 + "px"
   }
 })
 /**
