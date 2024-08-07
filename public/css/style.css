@@ -529,7 +529,8 @@ h3 {
 @media all and (max-width: 580px) {
   h2,
   h3 {
-    font-size: 2em;
+    font-size: 1em;
+    font-weight: 900;
   }
 }
 
@@ -537,7 +538,7 @@ a,
 label,
 p {
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 1rem;
+  font-size: 14px;
   font-weight: 200;
   color: white;
 }
@@ -591,6 +592,10 @@ p {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.width100 {
+  width: 100%;
 }
 
 .margin-auto {
@@ -724,7 +729,7 @@ body, p, h1 {
 }
 @media all and (max-width: 571px) {
   body p, p p, h1 p {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
@@ -932,7 +937,7 @@ body, p, h1 {
 
 .line {
   height: 1px;
-  margin: 0 auto;
+  margin: 15px auto;
   background: rgb(68, 44, 103);
   background: linear-gradient(90deg, rgb(68, 44, 103) 0%, rgb(0, 122, 255) 50%, rgb(68, 44, 103) 100%);
 }
@@ -942,7 +947,6 @@ body, p, h1 {
 }
 
 .swiper-slide {
-  text-align: center;
   font-size: 18px;
   display: flex;
   justify-content: center;

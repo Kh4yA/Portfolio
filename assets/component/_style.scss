@@ -6,7 +6,7 @@ body, p, h1{
   letter-spacing: 2px;
   @media all and (max-width: 571px) {
     p{
-      font-size: 20px;
+      font-size: 16px;
     }
   }
 }
@@ -212,7 +212,7 @@ body, p, h1{
 }
 .line{
   height: 1px;
-  margin: 0 auto;
+  margin: 15px auto;
   background: rgb(68,44,103);
   background: linear-gradient(90deg, rgba(68,44,103,1) 0%, rgba(0,122,255,1) 50%, rgba(68,44,103,1) 100%);}
 //swiper
@@ -221,7 +221,6 @@ body, p, h1{
 }
 
 .swiper-slide {
-  text-align: center;
   font-size: 18px;
   display: flex;
   justify-content: center;

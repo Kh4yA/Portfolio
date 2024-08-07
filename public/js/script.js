@@ -122,15 +122,15 @@ const buildTemplateProjetFront = (datas) => {
             <div class="large-12"><img src="public/img/${data.photo}" alt="image de ${data.nom}"></div>
           </div>
           <div class="content-card">
-            <h3 class="padding-bottom">${data.nom}</h3>
-            <p class="padding-bottom">${data.date}</p>
-            <p class="padding-bottom"><a href="${data.lien}" target="_blank"><span class="lien-projet">Lien vers le projet ICI</span></a></p>
-            <div class="logo-techno padding-bottom10px">
-              <P class="padding-bottom">Les technologies utilisées</P>
-              <img class="width24px" src="./public/img/${data.techno.image1}" alt="logo des techno utilsé" >
-              <img class="width24px" src="./public/img/${data.techno.image2}" alt="logo des techno utilsé" >
-              <img class="width24px" src="./public/img/${data.techno.image3}" alt="logo des techno utilsé" >
-              <img class="width24px" src="./public/img/${data.techno.image4}" alt="logo des techno utilsé" >
+            <h3 class="padding-bottom text-center">${data.nom}</h3>
+            <p class="padding-bottom text-center">${data.date}</p>
+            <p class="padding-bottom text-center"><a href="${data.lien}" target="_blank"><span class="lien-projet">Lien vers le projet ICI</span></a></p>
+            <div class="logo-techno padding20px flex justify-center">
+              <P class="padding-bottom text-center">Les technologies utilisées</P>
+              ${data.techno.image1 ? `<img class="width24px" src="./public/img/${data.techno.image1}" alt="logo des techno utilsé" ></img>` : ''}
+              ${data.techno.image2 ? `<img class="width24px" src="./public/img/${data.techno.image2}" alt="logo des techno utilsé" ></img>` : ''}
+              ${data.techno.image3 ? `<img class="width24px" src="./public/img/${data.techno.image3}" alt="logo des techno utilsé" ></img>` : ''}
+              ${data.techno.image4 ? `<img class="width24px" src="./public/img/${data.techno.image4}" alt="logo des techno utilsé" ></img>` : ''}
             </div>
             <p class="">${data.description}<br></p>
           </div>
@@ -148,15 +148,15 @@ const buildTemplateProjetBack = (datas) => {
             <div class="large-12"><img src="public/img/${data.photo}" alt="image de ${data.nom}"></div>
           </div>
           <div class="content-card">
-            <h3 class="padding-bottom">${data.nom}</h3>
-            <p class="padding-bottom">${data.date}</p>
-            <p class="padding-bottom"><a href="${data.lien}" target="_blank"><span class="lien-projet">Lien vers le code source sur git ICI</span></a></p>
-            <div class="logo-techno padding-bottom10px">
-              <P class="padding-bottom">Les technologies utilisées</P>
-              <img class="width24px" src="./public/img/${data.techno.image1}" alt="logo des techno utilsé" >
-              <img class="width24px" src="./public/img/${data.techno.image2}" alt="logo des techno utilsé" >
-              <img class="width24px" src="./public/img/${data.techno.image3}" alt="logo des techno utilsé" >
-              <img class="width24px" src="./public/img/${data.techno.image4}" alt="logo des techno utilsé" >
+            <h3 class="padding-bottom text-center width100">${data.nom}</h3>
+            <p class="padding-bottom text-center width100">${data.date}</p>
+            <p class="padding-bottom text-center width100"><a href="${data.lien}" target="_blank"><span class="lien-projet">Lien vers le code source sur git ICI</span></a></p>
+            <div class="logo-techno padding20px flex justify-center">
+              <P class="padding-bottom text-center width100">Les technologies utilisées</P>
+              ${data.techno.image1 ? `<img class="width24px" src="./public/img/${data.techno.image1}" alt="logo des techno utilsé" ></img>` : ''}
+              ${data.techno.image2 ? `<img class="width24px" src="./public/img/${data.techno.image2}" alt="logo des techno utilsé" ></img>` : ''}
+              ${data.techno.image3 ? `<img class="width24px" src="./public/img/${data.techno.image3}" alt="logo des techno utilsé" ></img>` : ''}
+              ${data.techno.image4 ? `<img class="width24px" src="./public/img/${data.techno.image4}" alt="logo des techno utilsé" ></img>` : ''}
             </div>
             <p class="">${data.description}<br></p>
           </div>

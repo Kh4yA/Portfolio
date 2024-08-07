@@ -18,14 +18,15 @@ h3 {
   font-size: 3em;
   color: white;
   @media all and (max-width:580px){
-      font-size: 2em;
+      font-size: 1em;
+      font-weight: 900;
   }
 }
 a,
 label,
 p {
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 1rem;
+  font-size: 14px;
   font-weight: 200;
   color: white;
 }
@@ -67,6 +68,9 @@ p {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+}
+.width100{
+  width: 100%;
 }
 .margin-auto{
   margin: 0 auto;
