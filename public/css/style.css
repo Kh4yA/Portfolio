@@ -650,6 +650,10 @@ p {
   color: #007aff;
 }
 
+.color-yellow {
+  color: yellow;
+}
+
 .card-style {
   border-radius: 30px;
   background-color: rgb(255, 255, 255);
