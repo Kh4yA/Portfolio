@@ -12,7 +12,7 @@
         "image2": "logo-css.png",
         "image3": "react.png"
       },
-      "description": "M'S Sportwears est une vitrine en ligne moderne et élégante, conçue pour mettre en valeur la marque et ses produits. Avec un design épuré et une interface conviviale, le site offre une expérience utilisateur intuitive pour les visiteurs, mettant en lumière la qualité et le style des produits de la marque.Grâce à une conception responsive, le site s'adapte parfaitement à tous les appareils, offrant une expérience cohérente sur les ordinateurs de bureau, les tablettes et les smartphones."
+      "description": "Fake Shop : Exercice React est un projet pédagogique visant à intégrer un prototype de boutique en ligne mobile en utilisant React avec Vite.js. Les principales fonctionnalités incluent la création d’une page d’accueil avec tri de produits par catégorie, une recherche par mots-clés, la visualisation des détails des produits, et l’ajout au panier. L’accent est mis sur une intégration front-end mobile responsive, avec une gestion des données via des contextes React et un routage simulé avec React-router. Des fonctionnalités bonus incluent un affichage dynamique du nombre d’articles dans le panier et une gestion complète des quantités."
     },
     {
       "nom": "M'S sportwears",
