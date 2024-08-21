@@ -6,13 +6,13 @@
       "type": "Front end version mobile",
       "lien": "https://kh4ya.github.io/fakeshop/",
       "info": "Pour une utilisation optimal cette version à etait conçu pour mobile.",
-      "photo": "fakeshop.png",
+      "photo": "fakeshop.jpg",
       "techno": {
         "image1": "html-5.png",
         "image2": "logo-css.png",
         "image3": "react.png"
       },
-      "description": "Fake Shop : Exercice React est un projet pédagogique visant à intégrer un prototype de boutique en ligne mobile en utilisant React avec Vite.js. Les principales fonctionnalités incluent la création d’une page d’accueil avec tri de produits par catégorie, une recherche par mots-clés, la visualisation des détails des produits, et l’ajout au panier. L’accent est mis sur une intégration front-end mobile responsive, avec une gestion des données via des contextes React et un routage simulé avec React-router. Des fonctionnalités bonus incluent un affichage dynamique du nombre d’articles dans le panier et une gestion complète des quantités."
+      "description": "Fake Shop est un projet pédagogique visant à intégrer un prototype de boutique en ligne mobile en utilisant React avec Vite.js. Les principales fonctionnalités incluent la création d’une page d’accueil avec tri de produits par catégorie, une recherche par mots-clés, la visualisation des détails des produits, et l’ajout au panier. L’accent est mis sur une intégration front-end mobile responsive, avec une gestion des données via des contextes React et un routage simulé avec React-router."
     },
     {
       "nom": "M'S sportwears",
