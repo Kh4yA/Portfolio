@@ -319,7 +319,13 @@ footer {
   width: 100%;
   text-align: center;
   padding: 20px;
-  background: #00000031;
+  p{
+    font-size: 18px;
+    @media all and (max-width: 579px) {
+      font-size: 16px;
+    }
+  }
+  background-color: #000000;
   color: #fff;
   p {
     @media all and (max-width: 579px) {

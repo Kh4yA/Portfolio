@@ -22,18 +22,27 @@ const darkMode = document.getElementById('switch')
 const parallax = document.getElementById("parallax");
 
 // PARALLAX
-// si l'ecran est superieur a 900px alors on jour le paralax sinon non
+// Optimisation du scroll avec requestAnimationFrame
 let lastKnownScrollPosition = 0;
 let ticking = false;
 
 function doParallax(scrollPos) {
-  const parallax = document.getElementById("parallax");
-  if (window.innerWidth < 900) {
-    parallax.style.backgroundPositionY = scrollPos / 1.4 + "px";
-  } else {
-    parallax.style.backgroundPositionY = scrollPos / 1.3 + "px";
-  }
+  const parallaxBg = document.querySelector(".parallax-bg");
+  // Ajuste ce coefficient pour obtenir l'effet désiré
+  let translateValue = scrollPos * 0.7;
+  parallaxBg.style.transform = `translateY(${translateValue}px)`;
 }
+
+window.addEventListener("scroll", function () {
+  lastKnownScrollPosition = window.scrollY;
+  if (!ticking) {
+    window.requestAnimationFrame(function () {
+      doParallax(lastKnownScrollPosition);
+      ticking = false;
+    });
+    ticking = true;
+  }
+});
 
 window.addEventListener("scroll", function () {
   lastKnownScrollPosition = window.scrollY;
